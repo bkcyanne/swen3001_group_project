@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">JumpStart</string>
+    <string name="jsLogo">JsLogo</string>
+    <string name ="Username">Username </string>
+    <string name ="hintUsername">Username </string>
+    <string name ="hintpassword">Password</string>
+    <string name ="loginButton">Login</string>
+    <string name ="or">or</string>
+    <string name ="connectwith">connect with</string>
+    <string name ="fbsignin">Sign in using Facebook</string>
+    <string name = "googlesignin">Sign in using Google</string>
+    <string name = "accCreateButton"> Dont have an account? Sign up</string>
+
+</resources>
