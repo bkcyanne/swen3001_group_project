@@ -10,6 +10,12 @@
     <string name ="fbsignin">Sign in using Facebook</string>
     <string name = "googlesignin">Sign in using Google</string>
     <string name = "accCreateButton"> Dont have an account? Sign up</string>
+
+
+
+    /*Acc Creation Page Strings */
     <string name ="createAccText">Create Account</string>
+    <string name = "profilePicAdd">""</string>
+    <string name = "addProfilePic">Add a Profile picture</string>
 
 </resources>

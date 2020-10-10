@@ -7,14 +7,51 @@
     tools:context=".AccCreationPage">
 
   <TextView
-      android:id="@+id/textView"
-      android:layout_width="146dp"
-      android:layout_height="59dp"
+      android:id="@+id/createAccText"
+      android:layout_width="272dp"
+      android:layout_height="91dp"
       android:layout_alignParentEnd="true"
       android:layout_alignParentBottom="true"
-      android:layout_marginEnd="133dp"
-      android:layout_marginBottom="568dp"
+      android:layout_marginEnd="60dp"
+      android:layout_marginBottom="650dp"
       android:text="@string/createAccText"
-      android:textSize="20sp" />
+      android:textSize="30sp" />
+
+  <ImageView
+      android:id="@+id/addProfilePic"
+      android:layout_width="159dp"
+      android:layout_height="119dp"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginEnd="122dp"
+      android:layout_marginBottom="582dp"
+      android:contentDescription="@string/profilePicAdd"
+      app:srcCompat="@drawable/addprofile" />
+
+  <TextView
+      android:id="@+id/editTextTextPersonName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginEnd="79dp"
+      android:layout_marginBottom="557dp"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text="@string/addProfilePic"
+      android:textSize="20sp"
+
+      tools:ignore="TextViewEdits" />
+
+  <EditText
+      android:id="@+id/editTextTextPersonName3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="762dp"
+      android:ems="10"
+      android:inputType="textPersonName"
+      android:text="Name" />
+
 
 </RelativeLayout>

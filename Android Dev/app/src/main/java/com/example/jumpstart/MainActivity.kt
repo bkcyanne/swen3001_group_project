@@ -30,43 +30,35 @@ class MainActivity : AppCompatActivity() {
 
         nameInput= findViewById(R.id.etUsername)
         passwordInput= findViewById(R.id.etPassword)
-        for(x in 0 until 2){
+        for(x in 0 until 2) {
             val logButton = findViewById<Button>(R.id.loginButton)
             logButton.setOnClickListener {
                 username = nameInput.text.toString();
-                password = passwordInput.text.toString();
+                password = passwordInput.text.toString()
+                if (username == "AdminCorey" && password == "tasteepatty") {
 
-                    if (username == "AdminCorey" && password == "tasteepatty") {
+                    val intent = Intent(this, AccCreationPage::class.java)
 
-                        val intent = Intent(this, AccCreationPage::class.java)
+                    startActivity(intent)
 
-                        startActivity(intent)
-
-                    }else{
-                        Toast.makeText(this, "Invalid Credentials $counter attempts remaining",Toast.LENGTH_SHORT).show()
-                        counter--
-
-
-                    }
-
-
-
-
-
-
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Invalid Credentials $counter attempts remaining",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    counter--
+                }
             }
-        /*val accCreateText = findViewById<EditText>(R.id.etAccCreateText)
-        accCreateText.setOnHoverListener { v: View?, event: MotionEvent? ->
-
-
-        }*/
-        val accCreateText = findViewById<EditText>(R.id.accCreation)
-        accCreateText.setOnClickListener{
-
 
         }
-    }
+        val accCreateText = findViewById<EditText>(R.id.accCreation)
+        accCreateText.setOnClickListener{
+            val intent = Intent(this, AccCreationPage::class.java)
 
+            startActivity(intent)
+
+        }
     }
 
 }
