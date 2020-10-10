@@ -17,5 +17,10 @@
     <string name ="createAccText">Create Account</string>
     <string name = "profilePicAdd">""</string>
     <string name = "addProfilePic">Add a Profile picture</string>
-
+    <string name = "cpName"> Name</string>
+    <string name = "cpEmail">Email</string>
+    <string name = "cpPassword">Password</string>
+    <string name = "cpPasswordConf">Re-Type Password</string>
+    <string name = "cpPasswordWarning">password must be at least 6 characters</string>
+    <string name = "cpCreate"> Create</string>
 </resources>
