@@ -14,13 +14,24 @@ import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
+    lateinit var username: String
+    lateinit var password: String
+    lateinit var nameInput : EditText
+    lateinit var passwordInput: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        nameInput= findViewById(R.id.etUsername)
+        passwordInput= findViewById(R.id.etPassword)
+
         val logButton = findViewById<Button>(R.id.loginButton)
         logButton.setOnClickListener {
+            username =nameInput.text.toString();
+            password=passwordInput.text.toString();
+            
+
             /*val intent = Intent(this,)*/
 
 
