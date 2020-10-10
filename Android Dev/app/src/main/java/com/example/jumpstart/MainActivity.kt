@@ -30,9 +30,16 @@ class MainActivity : AppCompatActivity() {
         logButton.setOnClickListener {
             username =nameInput.text.toString();
             password=passwordInput.text.toString();
+            if(username=="AdminCorey" && password =="tasteepatty"){
+
+
+                val intent = Intent(this,AccCreationPage::class.java)
+
+                    startActivity(intent)
+            }
             
 
-            /*val intent = Intent(this,)*/
+
 
 
         }

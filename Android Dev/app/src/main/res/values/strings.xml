@@ -10,5 +10,6 @@
     <string name ="fbsignin">Sign in using Facebook</string>
     <string name = "googlesignin">Sign in using Google</string>
     <string name = "accCreateButton"> Dont have an account? Sign up</string>
+    <string name ="createAccText">Create Account</string>
 
 </resources>
