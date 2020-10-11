@@ -65,7 +65,7 @@
         android:layout_marginBottom="274dp"
         android:background="@drawable/login_button"
         android:text="@string/loginButton"
-        android:textColor ="#572967"/>
+        android:textColor ="#FFFFFF"/>
 
     <TextView
         android:id="@+id/orMessage"

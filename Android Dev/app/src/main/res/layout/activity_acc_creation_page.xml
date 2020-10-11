@@ -44,7 +44,7 @@
       tools:ignore="RelativeOverlap,TextViewEdits" />
 
   <EditText
-      android:id="@+id/cpFirstName"
+      android:id="@+id/cpName"
       android:layout_width="227dp"
       android:layout_height="wrap_content"
       android:layout_alignParentStart="true"
@@ -105,7 +105,7 @@
       android:textSize="12sp" />
 
   <EditText
-      android:id="@+id/editTextTextPassword2"
+      android:id="@+id/cpPasswordConf"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_alignParentStart="true"
@@ -121,7 +121,7 @@
       android:background="#11000000"/>
 
   <Button
-      android:id="@+id/loginButton"
+      android:id="@+id/createButton"
       android:layout_width="170dp"
       android:layout_height="wrap_content"
       android:layout_alignParentEnd="true"
@@ -131,7 +131,7 @@
       android:background="@drawable/login_button"
       android:text="@string/cpCreate"
 
-      android:textColor="#572967" />
+      android:textColor="#FFFFFF" />
 
 
 </RelativeLayout>

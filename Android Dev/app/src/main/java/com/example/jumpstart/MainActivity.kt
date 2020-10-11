@@ -42,10 +42,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
 
                 } else {
-                    Toast.makeText(
-                        this,
-                        "Invalid Credentials $counter attempts remaining",
-                        Toast.LENGTH_SHORT
+                    Toast.makeText(this, "Invalid Credentials $counter attempts remaining", Toast.LENGTH_SHORT
                     ).show()
                     counter--
                 }
