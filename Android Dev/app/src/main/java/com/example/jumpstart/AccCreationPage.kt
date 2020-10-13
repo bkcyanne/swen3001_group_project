@@ -9,7 +9,7 @@ import android.widget.Toast
 import java.lang.Thread.sleep
 
 class AccCreationPage : AppCompatActivity() {
-    lateinit var accName: String;lateinit var accEmail: String;lateinit var accPassword: String;lateinit var accPasswordConf:String;
+    lateinit var accName: String;lateinit var accEmail: String;lateinit var accPassword: String;lateinit var accPasswordConf:String
 
     lateinit var accNameInput: EditText;lateinit var accEmailInput: EditText;lateinit var accPasswordInput:EditText;lateinit var accPasswordConfInput:EditText
 

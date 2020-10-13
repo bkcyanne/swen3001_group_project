@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         for(x in 0 until 2) {
             val logButton = findViewById<Button>(R.id.loginButton)
             logButton.setOnClickListener {
-                username = nameInput.text.toString();
+                username = nameInput.text.toString()
                 password = passwordInput.text.toString()
                 if (username == "AdminCorey" && password == "tasteepatty") {
 

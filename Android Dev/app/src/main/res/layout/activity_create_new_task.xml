@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background=""
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".CreateNewTask">
+
+    <TextView
+        android:id="@+id/createNewTask"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="718dp"
+        android:text="@string/createNewTask"
+        android:textColor="#A7A237"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/cntBackButton"
+        android:layout_width="71dp"
+        android:layout_height="54dp"
+        app:srcCompat="@drawable/backbutton"
+        android:contentDescription="@string/cntBackButton" />
+
+    <EditText
+        android:id="@+id/etcntTaskName"
+        android:layout_width="277dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="595dp"
+        android:autofillHints="@string/cntTaskName"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="@string/cntTaskName"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etcntTaskDescription"
+        android:layout_width="286dp"
+        android:layout_height="176dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="329dp"
+        android:autofillHints="@string/cntTaskName"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="@string/cntTaskDescription"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/cntAddTaskButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="188dp"
+        android:background="@drawable/login_button"
+        android:text="@string/cntAddTask"
+
+        android:textColor="#FFFFFF" />
+
+
+</RelativeLayout>
