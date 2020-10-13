@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 password = passwordInput.text.toString()
                 if (username == "AdminCorey" && password == "tasteepatty") {
 
-                    val intent = Intent(this, AccCreationPage::class.java)
+                    val intent = Intent(this, AllTasks::class.java)
 
                     startActivity(intent)
 

@@ -23,18 +23,19 @@
     <string name="cpPasswordWarning">password must be at least 6 characters</string>
     <string name="cpCreate"> Create</string>
     <string name="title_activity_create_new_task">CreateNewTask</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
 
-
-    /*All Task Page Strings*/
+    /*Create New Task Page Strings*/
     <string name="createNewTask">Create New Task</string>
     <string name="cntBackButton">Create New Task Back Button</string>
     <string name="cntTaskName">Task Name</string>
     <string name="cntTaskDescription">Task Description</string>
     <string name="cntAddTask">Add Task</string>
     <string name="title_activity_all_tasks">AllTasks</string>
+
+    /* All Tasks Page String*/
+    <string name="etAllTasks">All Tasks</string>
+    <string name= "etToday">Today</string>
+    <string name= "etTomorrow">Tomorrow</string>
+    <string name= "etUpcoming">Upcoming</string>
+
 </resources>

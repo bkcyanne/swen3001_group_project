@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background=""
     android:padding="@dimen/box_inset_layout_padding"
     tools:context=".CreateNewTask">
 
@@ -26,10 +25,10 @@
 
     <ImageView
         android:id="@+id/cntBackButton"
-        android:layout_width="71dp"
-        android:layout_height="54dp"
-        app:srcCompat="@drawable/backbutton"
-        android:contentDescription="@string/cntBackButton" />
+        android:layout_width="54dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/cntBackButton"
+        app:srcCompat="@drawable/backbutton" />
 
     <EditText
         android:id="@+id/etcntTaskName"
@@ -49,14 +48,14 @@
 
     <EditText
         android:id="@+id/etcntTaskDescription"
-        android:layout_width="286dp"
-        android:layout_height="176dp"
+        android:layout_width="255dp"
+        android:layout_height="149dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="329dp"
+        android:layout_marginBottom="356dp"
         android:autofillHints="@string/cntTaskName"
         android:background="#11000000"
         android:ems="10"
@@ -69,12 +68,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="107dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/login_button"
         android:text="@string/cntAddTask"
 
         android:textColor="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/arrow_down_float" />
 
 
 </RelativeLayout>
