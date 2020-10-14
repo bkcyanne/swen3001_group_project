@@ -25,7 +25,7 @@ class AccCreationPage : AppCompatActivity() {
         accPasswordConfInput= findViewById(R.id.cpPasswordConf)
 
 
-        val createButton = findViewById<Button>(R.id.createButton)
+        val createButton = findViewById<Button>(R.id.accCreationButton)
         createButton.setOnClickListener {
             accName = accNameInput.text.toString();
             accEmail = accEmailInput.text.toString()
@@ -44,7 +44,7 @@ class AccCreationPage : AppCompatActivity() {
             }else{
                 Toast.makeText(this,"Account Successfully Created",Toast.LENGTH_SHORT).show()
                 sleep(3000)
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, CreateNewTask::class.java)
 
                 startActivity(intent)
             }

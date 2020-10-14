@@ -11,7 +11,6 @@
     <string name="googlesignin">Sign in using Google</string>
     <string name="accCreateButton"> Dont have an account? Sign up</string>
 
-
     /*Acc Creation Page Strings */
     <string name="createAccText">Create Account</string>
     <string name="profilePicAdd">""</string>
@@ -24,7 +23,8 @@
     <string name="cpCreate"> Create</string>
     <string name="title_activity_create_new_task">CreateNewTask</string>
 
-    /*Create New Task Page Strings*/
+
+    /*Create new task */
     <string name="createNewTask">Create New Task</string>
     <string name="cntBackButton">Create New Task Back Button</string>
     <string name="cntTaskName">Task Name</string>
@@ -32,10 +32,14 @@
     <string name="cntAddTask">Add Task</string>
     <string name="title_activity_all_tasks">AllTasks</string>
 
-    /* All Tasks Page String*/
-    <string name="etAllTasks">All Tasks</string>
-    <string name= "etToday">Today</string>
-    <string name= "etTomorrow">Tomorrow</string>
-    <string name= "etUpcoming">Upcoming</string>
-
+    /*View All Tasks*/
+    <string name="ViewAllTasks">All Tasks</string>
+    <string name="todaytasks">Today</string>
+    <string name="tomorrowtasks">Tomorrow</string>
+    <string name="upcomingtasks">Upcoming</string>
+    <string name="calendarnav">Calendar</string>
+    <string name="tasksnav">Tasks</string>
+    <string name="settingsnav">Settings</string>
+    <string name="todaytask1">Pick Up Kids from Soccer</string>
+    <string name="todaytask1time">8:30pm </string>
 </resources>
