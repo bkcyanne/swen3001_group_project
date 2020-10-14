@@ -2,17 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/etCreateNewTask"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreateNewTask">
+
+    <TextView
+        android:id="@+id/createNewTask"
+        android:layout_width="201dp"
+        android:layout_height="86dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="570dp"
+        android:textSize= "25sp"
+        android:text="@string/createNewTask"
+
+
+        />
 
     <ImageView
         android:id="@+id/cntBackButton"
         android:layout_width="63dp"
         android:layout_height="50dp"
         android:contentDescription="@string/cntBackButton"
-        app:srcCompat="@drawable/back_button" />
+        app:srcCompat="@drawable/back_button"
+
+        />
 
     <EditText
         android:id="@+id/etcntTaskName"
@@ -28,7 +43,8 @@
         android:background="#11000000"
         android:ems="10"
         android:hint="@string/cntTaskName"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+       />
 
     <EditText
         android:id="@+id/etcntTaskDescription"
@@ -60,16 +76,9 @@
         android:textColor="#FFFFFF" />
 
     <TextView
-        android:id="@+id/createNewTask"
-        android:layout_width="167dp"
-        android:layout_height="54dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="122dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginBottom="555dp"
-        android:text="@string/createNewTask"
-        android:textColor="#37A7A0"
-        android:textSize="20sp" />
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty" />
+
 </RelativeLayout>

@@ -42,4 +42,5 @@
     <string name="settingsnav">Settings</string>
     <string name="todaytask1">Pick Up Kids from Soccer</string>
     <string name="todaytask1time">8:30pm </string>
+    <string name= "empty"></string>
 </resources>

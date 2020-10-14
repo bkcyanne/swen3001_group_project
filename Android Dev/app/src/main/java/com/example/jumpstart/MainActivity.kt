@@ -3,15 +3,11 @@ package com.example.jumpstart
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle;
-import android.view.MotionEvent
-import android.view.View;
+
 import android.widget.Button;
 import android.widget.EditText
-import android.widget.TextView;
+
 import android.widget.Toast
-import androidx.core.graphics.toColorInt
-import kotlinx.android.synthetic.main.activity_main.view.*
-import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
