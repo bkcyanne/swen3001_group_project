@@ -1,4 +1,4 @@
-package com.example.jumpstart
+package com.example.killmenow
 
 import org.junit.Test
 
