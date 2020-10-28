@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".newTask"/>
-
+        <activity android:name=".viewAllTasks"></activity>
+        <activity android:name=".newTask" />
         <activity android:name=".accCreationPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
