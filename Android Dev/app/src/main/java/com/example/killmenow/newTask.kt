@@ -21,7 +21,7 @@ class newTask : AppCompatActivity() {
         addTask.setOnClickListener {
             Toast.makeText(this,"Task Added",Toast.LENGTH_SHORT).show()
                 sleep(3000)
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, viewAllTasks::class.java)
                 startActivity(intent)
 
         }
