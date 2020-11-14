@@ -17,7 +17,7 @@
         android:layout_marginEnd="142dp"
         android:layout_marginBottom="532dp"
         android:contentDescription="@string/addProfile"
-        app:srcCompat="@drawable/profileCircle" />
+        app:srcCompat="@drawable/profilecircleicon" />
 
 
     <EditText
@@ -122,7 +122,7 @@
         tools:ignore="LabelFor" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/editPencilIcon"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -131,29 +131,19 @@
         android:layout_marginStart="343dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="673dp"
-        app:srcCompat="@drawable/edittheicon" />
+        app:srcCompat="@drawable/edittheicon"
+        android:contentDescription="@string/EditProfile" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="41dp"
-        android:layout_height="37dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="342dp"
-        android:layout_marginBottom="672dp"
-        app:srcCompat="@drawable/backprofilepageicon" />
 
     <TextView
         android:id="@+id/personalUsername"
-        android:layout_width="162dp"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="138dp"
-        android:layout_marginBottom="488dp"
-        android:text="Collect This Name From a listener later" />
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="439dp"
+        android:text="Collect This Username From a listener later" />
 
     <TextView
         android:id="@+id/personalEmail"
@@ -161,8 +151,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="125dp"
-        android:layout_marginBottom="439dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="490dp"
         android:text="Collect This Email From a listener later" />
 
 
