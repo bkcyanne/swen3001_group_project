@@ -40,8 +40,8 @@
 
     /*Edit profile*/
 
-    <string name = "EditProfile">Edit Profile</string>
-    <string name = "Gender">Gender</string>
-    <string name = "LinkedAccounts">Linked Accounts:</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="Gender">Gender</string>
+    <string name="LinkedAccounts">Linked Accounts:</string>
 
 </resources>

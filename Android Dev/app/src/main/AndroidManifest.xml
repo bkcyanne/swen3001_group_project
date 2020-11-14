@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".edItProfile"></activity>
+        <activity android:name=".profile"></activity>
+        <activity android:name=".edItProfile" />
         <activity android:name=".viewAllTasksScrollView" />
         <activity android:name=".viewAllTasks" />
         <activity android:name=".newTask" />

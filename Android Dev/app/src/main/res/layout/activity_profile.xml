@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile">
+
+
+
+    <ImageView
+        android:id="@+id/addProfilePic"
+        android:layout_width="177dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="532dp"
+        android:contentDescription="@string/addProfile"
+        app:srcCompat="@drawable/profileCircle" />
+
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="247dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="373dp"
+        android:autofillHints="asd"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="212dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="281dp"
+        android:autofillHints="asd"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/LinkedAccounts"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="124dp"
+        android:text="@string/LinkedAccounts"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/fbsignup"
+        android:layout_width="100dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="311dp"
+        android:layout_marginBottom="112dp"
+        app:srcCompat="@drawable/fbicon"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/googlePic"
+        android:layout_width="32dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="347dp"
+        android:layout_marginBottom="78dp"
+        app:srcCompat="@drawable/googleicon"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/emptyFbArea"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="78dp"
+        android:autofillHints="asd"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint=""
+        android:inputType="textPassword"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/emptyGoogleArea"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="120dp"
+        android:autofillHints="asd"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint=""
+        android:inputType="textPassword"
+        tools:ignore="LabelFor" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="343dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="673dp"
+        app:srcCompat="@drawable/edittheicon" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="342dp"
+        android:layout_marginBottom="672dp"
+        app:srcCompat="@drawable/backprofilepageicon" />
+
+    <TextView
+        android:id="@+id/personalUsername"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="488dp"
+        android:text="Collect This Name From a listener later" />
+
+    <TextView
+        android:id="@+id/personalEmail"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="439dp"
+        android:text="Collect This Email From a listener later" />
+
+
+</RelativeLayout>
