@@ -194,5 +194,16 @@
         android:inputType="textPassword"
         tools:ignore="LabelFor" />
 
+    <ImageView
+        android:id="@+id/backButtonIcon"
+        android:layout_width="46dp"
+        android:layout_height="53dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="341dp"
+        android:layout_marginBottom="657dp"
+        app:srcCompat="@drawable/backprofilepageicon"
+        android:contentDescription="@string/warning" />
+
 
 </RelativeLayout>

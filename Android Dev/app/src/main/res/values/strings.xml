@@ -44,4 +44,17 @@
     <string name="Gender">Gender</string>
     <string name="LinkedAccounts">Linked Accounts:</string>
 
+
+    /*Settings*/
+
+    <string name = "Settings">Settings</string>
+    <string name ="Profile">Profile</string>
+    <string name = "Notifications">Notifications</string>
+    <string name = "InviteFriend">Invite a Friend!</string>
+    <string name = "preferences">Preferences</string>
+    <string name = "FirstDay">First Day</string>
+    <string name = "Language">Language</string>
+    <string name = "Themes">Themes</string>
+
+
 </resources>
