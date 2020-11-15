@@ -1,159 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newTask">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
 
-    <ImageView
-        android:id="@+id/editPencilIcon3"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="341dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="689dp"
-        android:contentDescription="@string/EditProfile"
-        app:srcCompat="@drawable/edittheicon" />
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="78dp"
+           >
 
-    <ImageView
-        android:id="@+id/backButtonIcon2"
-        android:layout_width="46dp"
-        android:layout_height="42dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="343dp"
-        android:layout_marginBottom="683dp"
-        android:contentDescription="@string/warning"
-        app:srcCompat="@drawable/backprofilepageicon" />
+            <ImageView
+                android:id="@+id/backButtonIcon2"
+                android:layout_width="wrap_content"
+                android:layout_height="69dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="313dp"
+                android:contentDescription="@string/warning"
+                app:srcCompat="@drawable/backprofilepageicon" />
 
-    <EditText
-        android:id="@+id/TaskDescription"
-        android:layout_width="257dp"
-        android:layout_height="115dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="293dp"
-        android:autofillHints="asd"
-        android:background="#11000000"
-        android:ems="10"
-        android:hint="@string/ctTaskDescription"
-        android:inputType="textPersonName" />
+            <ImageView
+                android:id="@+id/editPencilIcon3"
+                android:layout_width="106dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="314dp"
+                android:layout_marginEnd="-9dp"
+                android:layout_marginBottom="14dp"
+                android:contentDescription="@string/EditProfile"
+                app:srcCompat="@drawable/edittheicon" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/createNewTask"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="57dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="600dp"
         android:text="@string/createNewTask"
-        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#52AAA5"
+        android:textSize="30sp"
         tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="62dp" />
+        tools:layout_editor_absoluteY="62dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="40dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/tasknameicon"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/TaskName"
+                android:layout_width="265dp"
+                android:layout_height="62dp"
+                android:autofillHints="asd"
+                android:background="@drawable/backgroundbox"
+                android:ems="10"
+                android:hint="@string/ctTaskName"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+    </TableLayout>
 
     <EditText
-        android:id="@+id/TaskName"
-        android:layout_width="257dp"
-        android:layout_height="71dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="483dp"
+        android:id="@+id/TaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
         android:autofillHints="asd"
-        android:background="#11000000"
+        android:background="@drawable/backgroundbox"
         android:ems="10"
-        android:hint="@string/ctTaskName"
-        android:inputType="textPersonName" />
-
-    <Button
-        android:id="@+id/addTaskButton"
-        android:layout_width="141dp"
-        android:layout_height="33dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="242dp"
-        android:layout_marginBottom="83dp"
-        android:background="@drawable/shape"
-        android:text="@string/ctAddTask" />
-
-    <Button
-        android:id="@+id/shareTaskButton"
-        android:layout_width="141dp"
-        android:layout_height="33dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="83dp"
-        android:background="@drawable/shape"
-        android:text="@string/ctShareTask" />
-
-
-    <TextView
-        android:id="@+id/EndHourTime"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="182dp"
-        android:background="@drawable/backgroundbox"
-        android:gravity="center"
-        android:hint="@string/HourTime" />
-
-    <TextView
-        android:id="@+id/startText"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="248dp"
-        android:layout_marginBottom="224dp"
-        android:text="@string/start"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/End"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="224dp"
-        android:text="@string/End"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/StartHourTime"
-        android:layout_width="67dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="268dp"
-        android:layout_marginBottom="182dp"
-        android:background="@drawable/backgroundbox"
-        android:gravity="center"
-        android:hint="@string/HourTime" />
+        android:hint="@string/ctTaskDescription"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
 
     <DatePicker
         android:id="@+id/datePicker1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="39dp"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
         android:calendarViewShown="false"
-        android:datePickerMode="spinner" />
+        android:datePickerMode="spinner"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/StartHourTime"
+            android:layout_width="114dp"
+            android:layout_height="51dp"
+            android:background="@drawable/backgroundbox"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:hint="@string/HourTime"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/End"
+            android:layout_width="78dp"
+            android:layout_height="33dp"
+            android:text="@string/End"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/EndHourTime"
+            android:layout_width="114dp"
+            android:layout_height="51dp"
+            android:background="@drawable/backgroundbox"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:hint="@string/HourTime"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginTop="40dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent"
+            >
+
+            <Button
+                android:id="@+id/addTaskButton"
+                android:layout_width="190dp"
+                android:layout_height="39dp"
+
+                android:background="@drawable/shape"
+                android:text="@string/ctAddTask"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/shareTaskButton"
+                android:layout_width="190dp"
+                android:layout_height="39dp"
+                android:background="@drawable/shape"
+                android:text="@string/ctShareTask"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+        </TableRow>
+
+    </TableLayout>
 
 
 
-</RelativeLayout>
+</LinearLayout>
