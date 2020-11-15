@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".newTask">
 
+
+
+
     <TextView
         android:id="@+id/createNewTask"
         android:layout_width="200dp"
         android:layout_height="57dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="496dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="633dp"
         android:text="@string/createNewTask"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="160dp"
@@ -21,12 +24,12 @@
 
     <EditText
         android:id="@+id/TaskName"
-        android:layout_width="224dp"
-        android:layout_height="wrap_content"
+        android:layout_width="257dp"
+        android:layout_height="71dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="517dp"
         android:autofillHints="asd"
         android:background="#11000000"
         android:ems="10"
@@ -35,12 +38,12 @@
 
     <EditText
         android:id="@+id/TaskDescription"
-        android:layout_width="220dp"
-        android:layout_height="112dp"
+        android:layout_width="257dp"
+        android:layout_height="115dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="173dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="326dp"
         android:autofillHints="asd"
         android:background="#11000000"
         android:ems="10"
@@ -49,19 +52,217 @@
 
     <Button
         android:id="@+id/addTaskButton"
-        android:layout_width="158dp"
-        android:layout_height="38dp"
+        android:layout_width="141dp"
+        android:layout_height="33dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginEnd="242dp"
+        android:layout_marginBottom="83dp"
         android:background="@drawable/shape"
         android:text="@string/ctAddTask" />
 
+    <Button
+        android:id="@+id/shareTaskButton"
+        android:layout_width="141dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="83dp"
+        android:background="@drawable/shape"
+        android:text="@string/ctShareTask" />
+
+    <TextView
+        android:id="@+id/startText"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="265dp"
+        android:layout_marginBottom="264dp"
+        android:text="@string/start"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/End"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="266dp"
+        android:text="@string/End"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="77dp"
-        android:layout_height="64dp"
-        app:srcCompat="@drawable/tasks"
+        android:id="@+id/StartUpHourArrow"
+        android:layout_width="58dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="310dp"
+        android:layout_marginBottom="238dp"
+        app:srcCompat="@drawable/uparrowicons"
         tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/StartUpMinuteArrow"
+        android:layout_width="58dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="238dp"
+        app:srcCompat="@drawable/uparrowicons"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/EndUpHourArrow"
+        android:layout_width="58dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="199dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="237dp"
+        app:srcCompat="@drawable/uparrowicons"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/EndUpMinuteArrow"
+        android:layout_width="58dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="245dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="237dp"
+        app:srcCompat="@drawable/uparrowicons"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/StartDownHourArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="310dp"
+        android:layout_marginBottom="194dp"
+        app:srcCompat="@drawable/downarrowions"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/EndDownHourArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="194dp"
+        app:srcCompat="@drawable/downarrowions"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/EndDownMinuteArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="244dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="194dp"
+        app:srcCompat="@drawable/downarrowions"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/StartDownMinuteArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="193dp"
+        app:srcCompat="@drawable/downarrowions"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/StartHourTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="331dp"
+        android:layout_marginBottom="218dp"
+        android:text="@string/HourTime" />
+
+    <TextView
+        android:id="@+id/EndHourTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="220dp"
+        android:text="@string/HourTime" />
+
+    <TextView
+        android:id="@+id/colon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="312dp"
+        android:layout_marginBottom="216dp"
+        android:text="@string/Colon"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/colon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="217dp"
+        android:text="@string/Colon"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/StartMinuteTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="281dp"
+        android:layout_marginBottom="219dp"
+        android:text="@string/MinuteTime" />
+
+    <TextView
+        android:id="@+id/EndMinuteTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="220dp"
+        android:text="@string/MinuteTime" />
+
+
 </RelativeLayout>
