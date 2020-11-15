@@ -14,7 +14,9 @@
         <activity android:name=".edItProfile" />
         <activity android:name=".viewAllTasksScrollView" />
         <activity android:name=".viewAllTasks" />
-        <activity android:name=".newTask" />
+        <activity android:name=".newTask" >
+
+        </activity>
         <activity android:name=".accCreationPage" />
         <activity android:name=".MainActivity">
             <intent-filter>

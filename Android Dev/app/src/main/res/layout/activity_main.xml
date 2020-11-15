@@ -131,11 +131,11 @@
     <ImageView
         android:id="@+id/blob"
         android:layout_width="match_parent"
-        android:layout_height="530dp"
+        android:layout_height="458dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="431dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="409dp"
         app:srcCompat="@drawable/mainscreenblob"
         tools:ignore="ContentDescription" />
 
