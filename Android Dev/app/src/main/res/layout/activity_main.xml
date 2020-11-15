@@ -7,9 +7,6 @@
     tools:context=".MainActivity">
 
 
-
-
-
     <TextView
         android:id="@+id/or"
         android:layout_width="204dp"
@@ -17,24 +14,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
 
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="222dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="155dp"
 
         android:text="@string/or"
+        android:textAlignment="center"
         android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/googlesignup"
-        android:layout_width="204dp"
-        android:layout_height="46dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginEnd="141dp"
-        android:layout_marginBottom="146dp"
-
-        android:text="@string/googlesignup"
-        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/facebooksignup"
@@ -43,20 +28,55 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
 
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="87dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="63dp"
 
         android:text="@string/facebooksignup"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/googlesignup"
+        android:layout_width="204dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="112dp"
+
+        android:text="@string/googlesignup"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/googlePic"
+        android:layout_width="37dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="283dp"
+        android:layout_marginBottom="124dp"
+        app:srcCompat="@drawable/googleicon"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/fbsignup"
+        android:layout_width="59dp"
+        android:layout_height="47dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="273dp"
+        android:layout_marginBottom="72dp"
+        app:srcCompat="@drawable/fbicon"
+        tools:ignore="ContentDescription" />
+
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="124dp"
+        android:layout_width="211dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="286dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="214dp"
         android:background="@drawable/shape"
         android:text="@string/loginButton" />
 
@@ -66,70 +86,76 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="104dp"
+        android:layout_marginEnd="76dp"
         android:layout_marginBottom="8dp"
         android:background="#FFFFFF"
         android:text="@string/noAcc" />
 
     <ImageView
-        android:id="@+id/fbsignup"
-        android:layout_width="wrap_content"
-        android:layout_height="53dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="345dp"
-        android:layout_marginBottom="90dp"
-        app:srcCompat="@drawable/fbicon"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/googlePic"
-        android:layout_width="61dp"
-        android:layout_height="48dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="350dp"
-        android:layout_marginBottom="149dp"
-        app:srcCompat="@drawable/googleicon"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
         android:id="@+id/jslogo"
-        android:layout_width="251dp"
-        android:layout_height="176dp"
+        android:layout_width="325dp"
+        android:layout_height="249dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="523dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="368dp"
         app:srcCompat="@drawable/jslogo"
         tools:ignore="ContentDescription" />
 
     <EditText
-        android:id="@+id/Username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/Password"
+        android:layout_width="322dp"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="460dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="284dp"
+        android:autofillHints="asd"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/Username"
-        android:background="#11000000"
-        android:autofillHints="asd" />
+        android:hint="@string/Password"
+        android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/Username"
+        android:layout_width="322dp"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="403dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="343dp"
+        android:autofillHints="asd"
         android:ems="10"
-        android:background="#11000000"
-        android:inputType="textPassword"
-        android:hint="@string/Password"
-        android:autofillHints="asd" />
+        android:hint="@string/Username"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:id="@+id/blob"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="431dp"
+        app:srcCompat="@drawable/mainscreenblob"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:layout_width="165dp"
+        android:layout_height="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="176dp"
+        android:background="@android:color/darker_gray" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="235dp"
+        android:layout_marginBottom="176dp"
+        android:background="@android:color/darker_gray" />
 
 </RelativeLayout>
