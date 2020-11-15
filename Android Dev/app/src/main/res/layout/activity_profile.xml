@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/profilecircleicon" />
 
     <TextView
-        android:id="@+id/LinkedAccounts"
+        android:id="@+id/totaltasklbl"
         android:layout_width="159dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
@@ -43,7 +43,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/linkedAccounts4"
+        android:id="@+id/activetasklbl"
         android:layout_width="159dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
@@ -56,7 +56,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/linkedAccounts5"
+        android:id="@+id/activetasktxt"
         android:layout_width="159dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
@@ -69,7 +69,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/linkedAccounts6"
+        android:id="@+id/totaltasktxt"
         android:layout_width="159dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
@@ -82,7 +82,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/linkedAccounts"
+        android:id="@+id/lasteditedtxt"
         android:layout_width="159dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
@@ -90,12 +90,25 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="245dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="14dp"
         android:text="@string/LinkedAccounts"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/linkedAccounts3"
+        android:id="@+id/lasteditlbl"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/LinkedAccounts"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/usremailtxt"
         android:layout_width="159dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
@@ -109,7 +122,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/linkedAccounts2"
+        android:id="@+id/usrfullnametxt"
         android:layout_width="159dp"
         android:layout_height="49dp"
         android:layout_alignParentStart="true"
