@@ -6,51 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".profile">
 
+    <ImageView
+        android:id="@+id/profileblob"
+        android:layout_width="match_parent"
+        android:layout_height="367dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="373dp"
+        app:srcCompat="@drawable/profileblob"
+        tools:ignore="ContentDescription" />
 
 
     <ImageView
         android:id="@+id/addProfilePic"
-        android:layout_width="177dp"
-        android:layout_height="120dp"
+        android:layout_width="265dp"
+        android:layout_height="208dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="532dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="484dp"
         android:contentDescription="@string/addProfile"
         app:srcCompat="@drawable/profilecircleicon" />
-
-
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="247dp"
-        android:layout_height="52dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="373dp"
-        android:autofillHints="asd"
-        android:background="#11000000"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="212dp"
-        android:layout_height="52dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="281dp"
-        android:autofillHints="asd"
-        android:background="#11000000"
-        android:ems="10"
-        android:hint="@string/Password"
-        android:inputType="textPassword" />
 
     <TextView
         android:id="@+id/LinkedAccounts"
@@ -59,67 +36,91 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginEnd="218dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="231dp"
+        android:layout_marginBottom="262dp"
         android:text="@string/LinkedAccounts"
         android:textSize="16sp" />
 
-    <ImageView
-        android:id="@+id/fbsignup"
-        android:layout_width="100dp"
-        android:layout_height="37dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="311dp"
-        android:layout_marginBottom="112dp"
-        app:srcCompat="@drawable/fbicon"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/googlePic"
-        android:layout_width="32dp"
-        android:layout_height="25dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="347dp"
-        android:layout_marginBottom="78dp"
-        app:srcCompat="@drawable/googleicon"
-        tools:ignore="ContentDescription" />
-
-    <EditText
-        android:id="@+id/emptyFbArea"
-        android:layout_width="234dp"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/linkedAccounts4"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginBottom="78dp"
-        android:autofillHints="asd"
-        android:background="#11000000"
-        android:ems="10"
-        android:hint=""
-        android:inputType="textPassword"
-        tools:ignore="LabelFor" />
+        android:layout_marginStart="233dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="258dp"
+        android:text="@string/LinkedAccounts"
+        android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/emptyGoogleArea"
-        android:layout_width="234dp"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/linkedAccounts5"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="120dp"
-        android:autofillHints="asd"
-        android:background="#11000000"
-        android:ems="10"
-        android:hint=""
-        android:inputType="textPassword"
-        tools:ignore="LabelFor" />
+        android:layout_marginStart="231dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="172dp"
+        android:text="@string/LinkedAccounts"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/linkedAccounts6"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="231dp"
+        android:layout_marginBottom="174dp"
+        android:text="@string/LinkedAccounts"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/linkedAccounts"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="245dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/LinkedAccounts"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/linkedAccounts3"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="390dp"
+        android:text="@string/LinkedAccounts"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/linkedAccounts2"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="135dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="431dp"
+        android:text="@string/LinkedAccounts"
+        android:textAlignment="center"
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/editPencilIcon"
@@ -135,26 +136,6 @@
         android:contentDescription="@string/EditProfile" />
 
 
-    <TextView
-        android:id="@+id/personalUsername"
-        android:layout_width="184dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="439dp"
-        android:text="Collect This Username From a listener later" />
-
-    <TextView
-        android:id="@+id/personalEmail"
-        android:layout_width="184dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="490dp"
-        android:text="Collect This Email From a listener later" />
-
     <ImageView
         android:id="@+id/backButtonIcon"
         android:layout_width="46dp"
@@ -165,6 +146,8 @@
         android:layout_marginBottom="657dp"
         app:srcCompat="@drawable/backprofilepageicon"
         android:contentDescription="@string/warning" />
+
+
 
 
 </RelativeLayout>
