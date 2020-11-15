@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".settings"></activity>
         <activity android:name=".profile" />
-        <activity android:name=".edItProfile" />
+        <activity android:name=".editProfile" />
         <activity android:name=".viewAllTasksScrollView" />
         <activity android:name=".viewAllTasks" />
         <activity android:name=".newTask" />

@@ -62,7 +62,7 @@ class newTask : AppCompatActivity() {
                     timePicker,hour,minute ->
                 cal.set(Calendar.HOUR_OF_DAY,hour)
                 cal.set(Calendar.MINUTE,minute)
-                startTime.text = SimpleDateFormat("HH:mm").format(cal.time)
+                endTime.text = SimpleDateFormat("HH:mm").format(cal.time)
 
             }
             TimePickerDialog(this,timeSetListener,cal.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
