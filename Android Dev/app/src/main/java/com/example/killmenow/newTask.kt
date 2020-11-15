@@ -23,6 +23,7 @@ class newTask : AppCompatActivity() {
     lateinit var ctTaskDescriptionInput:TextView
     lateinit var startTime:TextView
     lateinit var endTime:TextView
+    lateinit var datePick:DatePicker
     var startTimeHour: Int = 0
     var startTimeMinute: Int = 0
     var endTimeHour: Int = 0
@@ -37,6 +38,8 @@ class newTask : AppCompatActivity() {
         ctTaskDescriptionInput=findViewById<EditText>(R.id.TaskDescription)
         startTime=findViewById<TextView>(R.id.StartHourTime)
         endTime=findViewById<TextView>(R.id.EndHourTime)
+
+        ctTaskName=ctTaskNameInput.text.toString()
 
         startTime.setOnClickListener {
 
@@ -65,11 +68,28 @@ class newTask : AppCompatActivity() {
             TimePickerDialog(this,timeSetListener,cal.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
         }
 
+
+            val datePick=findViewById<DatePicker>(R.id.datePicker1)
+            val today= Calendar.getInstance()
+        datePick.init(today.get(Calendar.YEAR),today.get(Calendar.MONTH),today.get(Calendar.DAY_OF_MONTH)){
+
+
+            view,year,month,day ->
+            val month=month+1
+            val message ="$day/$month/$year Selected"
+            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
+
+
+        }
+
+
         val addTaskButtonClicked =findViewById<Button>(R.id.addTaskButton)
         addTaskButtonClicked.setOnClickListener {
             ctTaskName=ctTaskNameInput.text.toString()
             ctTaskDescription=ctTaskDescriptionInput.text.toString()
 
+            Toast.makeText(this, ctTaskName+"Added Successfully",Toast.LENGTH_SHORT).show()
+            sleep(3000)
             val intent= Intent(this,viewAllTasks::class.java)
             startActivity(intent)
 

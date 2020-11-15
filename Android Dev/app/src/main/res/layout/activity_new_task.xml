@@ -121,5 +121,16 @@
         android:gravity="center"
         android:hint="@string/HourTime" />
 
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="156dp"
+        android:layout_height="106dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="116dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
 
 </RelativeLayout>
