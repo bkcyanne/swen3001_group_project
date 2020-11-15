@@ -12,6 +12,9 @@ import android.widget.*
 import androidx.core.text.toSpannable
 import kotlinx.android.synthetic.main.activity_new_task.*
 import java.lang.Thread.sleep
+import java.text.Format
+import java.text.SimpleDateFormat
+import java.util.*
 
 class newTask : AppCompatActivity() {
     lateinit var ctTaskName: String
@@ -24,6 +27,7 @@ class newTask : AppCompatActivity() {
     var startTimeMinute: Int = 0
     var endTimeHour: Int = 0
     var endTimeHMinute: Int = 0
+    lateinit var timeSet:String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +38,32 @@ class newTask : AppCompatActivity() {
         startTime=findViewById<TextView>(R.id.StartHourTime)
         endTime=findViewById<TextView>(R.id.EndHourTime)
 
+        startTime.setOnClickListener {
 
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener{
+                timePicker,hour,minute ->
+                cal.set(Calendar.HOUR_OF_DAY,hour)
+                cal.set(Calendar.MINUTE,minute)
+                startTime.text = SimpleDateFormat("HH:mm").format(cal.time)
+
+            }
+            TimePickerDialog(this,timeSetListener,cal.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
+        }
+
+
+        endTime.setOnClickListener {
+
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener{
+                    timePicker,hour,minute ->
+                cal.set(Calendar.HOUR_OF_DAY,hour)
+                cal.set(Calendar.MINUTE,minute)
+                startTime.text = SimpleDateFormat("HH:mm").format(cal.time)
+
+            }
+            TimePickerDialog(this,timeSetListener,cal.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
+        }
 
         val addTaskButtonClicked =findViewById<Button>(R.id.addTaskButton)
         addTaskButtonClicked.setOnClickListener {
