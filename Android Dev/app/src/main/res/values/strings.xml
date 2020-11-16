@@ -26,11 +26,11 @@
     <string name="ctTaskName">Task Name</string>
     <string name="ctTaskDescription"> Task Description</string>
     <string name="ctAddTask">Add Task</string>
-    <string name = "ctShareTask">Share Task</string>
-    <string name = "start">Start</string>
-    <string name = "HourTime">12:00</string>
+    <string name="ctShareTask">Share Task</string>
+    <string name="start">Start</string>
+    <string name="HourTime">12:00</string>
 
-    <string name ="End">End</string>
+    <string name="End">End</string>
 
 
     /*View All Tasks*/
@@ -56,14 +56,14 @@
 
     /*Settings*/
 
-    <string name = "Settings">Settings</string>
-    <string name ="Profile">Profile</string>
-    <string name = "Notifications">Notifications</string>
-    <string name = "InviteFriend">Invite a Friend!</string>
-    <string name = "preferences">Preferences</string>
-    <string name = "FirstDay">First Day</string>
-    <string name = "Language">Language</string>
-    <string name = "Themes">Themes</string>
+    <string name="Settings">Settings</string>
+    <string name="Profile">Profile</string>
+    <string name="Notifications">Notifications</string>
+    <string name="InviteFriend">Invite a Friend!</string>
+    <string name="preferences">Preferences</string>
+    <string name="FirstDay">First Day</string>
+    <string name="Language">Language</string>
+    <string name="Themes">Themes</string>
 
     /*View Profile*/
 
@@ -80,5 +80,12 @@
     <string name="tasktitle">Warrior</string>
     <string name="googleaccount">tesing@gmail.com</string>
     <string name="facebookaccount">John Brown</string>
+
+    /*Google Profile*/
+
+    <string name ="GoogleFullName">Corey Edwards</string>
+    <string name ="GoogleEmail">CoreyJ.Edwards24@gmail.com</string>
+    <string name ="GoogleId">DatBoiCorey</string>
+    <string name = "signout">Sign Out</string>
 
 </resources>

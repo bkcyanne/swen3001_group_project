@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoogleProfile">
+
+
+    <ImageView
+        android:id="@+id/GooglePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="146dp"
+        app:srcCompat="@drawable/profilecircleicon"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/GoogleFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="292dp"
+        android:textSize="20sp"
+        android:text="@string/GoogleFullName" />
+
+    <TextView
+        android:id="@+id/GoogleEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="358dp"
+        android:textSize="20sp"
+        android:text="@string/GoogleEmail" />
+
+    <TextView
+        android:id="@+id/GoogleId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="435dp"
+        android:textSize="20sp"
+        android:text="@string/GoogleId" />
+
+    <Button
+        android:id="@+id/SignOut"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/shape"
+        android:text="@string/signout"
+        android:textAlignment="center" />
+
+
+</RelativeLayout>
