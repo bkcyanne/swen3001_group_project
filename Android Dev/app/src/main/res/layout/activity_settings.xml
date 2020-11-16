@@ -6,4 +6,167 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="54dp">
+
+            <ImageView
+                android:id="@+id/backButtonIcon2"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="335dp"
+                android:contentDescription="@string/warning"
+                app:srcCompat="@drawable/backprofilepageicon" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/Settings"
+        android:textAlignment="center"
+        android:textColor="#52AAA5"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/LinkedAccounts"
+            app:srcCompat="@drawable/accounticon"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:id="@+id/ProfileClicker"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:text="@string/Profile"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp">
+
+        <ImageView
+            android:id="@+id/notificationImage"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/LinkedAccounts"
+            app:srcCompat="@drawable/notificationicon"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:id="@+id/Notifications"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:text="@string/Notifications"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="30dp">
+
+        <ImageView
+            android:id="@+id/invitefriendicon"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/LinkedAccounts"
+            app:srcCompat="@drawable/inviteafriendicon"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:id="@+id/inviteFriend"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:text="@string/InviteFriend"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Preferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/preferences"
+        android:textSize="25sp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/FirstDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/FirstDay"
+        android:textSize="25sp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/Language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+
+        android:text="@string/Language"
+        android:textSize="25sp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/Themes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+
+        android:text="@string/Themes"
+        android:textSize="25sp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/helpicon"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+
+        app:srcCompat="@drawable/helpicon"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="70dp"
+        />
+
 </LinearLayout>
