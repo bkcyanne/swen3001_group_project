@@ -11,10 +11,10 @@
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="match_parent"
-        android:layout_height="422dp"
+        android:layout_height="351dp"
         android:contentDescription="@string/addProfile"
-        app:srcCompat="@drawable/mainscreenblob"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/mainscreenblob" />
 
     <EditText
         android:id="@+id/Username"
@@ -71,7 +71,7 @@
             android:textAlignment="center"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
-            android:layout_marginTop="70dp"/>
+            android:layout_marginTop="50dp"/>
 
 
 
