@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app2="http://schema.android.com/apk/res/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".profile"
+    tools:ignore="NamespaceTypo">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="369dp">
+        android:layout_height="266dp">
 
         <ImageView
             android:id="@+id/profileblob"
@@ -24,82 +27,87 @@
         <RelativeLayout
             android:id="@+id/relativeLayout1"
             android:layout_width="fill_parent"
-            android:layout_height="78dp">
+            android:layout_height="54dp">
 
             <ImageView
                 android:id="@+id/backButtonIcon2"
-                android:layout_width="wrap_content"
-                android:layout_height="69dp"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="11dp"
-                android:layout_marginEnd="313dp"
+                android:layout_marginEnd="335dp"
                 android:contentDescription="@string/warning"
                 app:srcCompat="@drawable/backprofilepageicon" />
-
-            <ImageView
-                android:id="@+id/editPencilIcon3"
-                android:layout_width="106dp"
-                android:layout_height="62dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="314dp"
-                android:layout_marginEnd="-9dp"
-                android:layout_marginBottom="14dp"
-                android:contentDescription="@string/EditProfile"
-                app:srcCompat="@drawable/edittheicon" />
 
 
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="298dp"
-            android:layout_height="98dp"
+            android:layout_width="303dp"
+            android:layout_height="109dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="251dp"
+            android:layout_marginTop="193dp"
             android:layout_marginEnd="57dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/usrfullnametxt"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:text="@string/pro_fullname"
                 android:textAlignment="center"
                 android:textSize="16sp" />
-
             <TextView
                 android:id="@+id/usremailtxt"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:text="@string/pro_email"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
 
+
+
         </LinearLayout>
+
+
 
         <ImageView
             android:id="@+id/addProfilePic"
-            android:layout_width="234dp"
-            android:layout_height="283dp"
+            android:layout_width="251dp"
+            android:layout_height="194dp"
 
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="91dp"
-            android:layout_marginBottom="123dp"
+            android:layout_marginBottom="60dp"
             android:contentDescription="@string/addProfile"
             app:srcCompat="@drawable/profilecircleicon" />
 
+        <ImageView
+            android:id="@+id/editPencilIcon3"
+            android:layout_width="34dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="237dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginBottom="180dp"
+            android:contentDescription="@string/EditProfile"
+            android:rotation="9"
+            app:srcCompat="@drawable/edittheicon" />
     </RelativeLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="#FFFFFF"
         android:orientation="horizontal">
 
@@ -158,4 +166,30 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/recyclerView"/>
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/container"/>
+           <com.google.android.material.bottomnavigation.BottomNavigationView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/bottomNav"
+               android:layout_alignParentBottom="true"
+               android:background="?android:attr/windowBackground"
+               app:menu="@menu/menu"/>
+       </RelativeLayout>
+
+
 </LinearLayout>

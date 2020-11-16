@@ -79,5 +79,8 @@
     <string name = "FirstDay">First Day</string>
     <string name = "Language">Language</string>
     <string name = "Themes">Themes</string>
+    <string name="recents">Tasks</string>
+    <string name="favorites">Calendar</string>
+    <string name="nearby">Settings</string>
 
 </resources>

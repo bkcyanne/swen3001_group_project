@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".settings"></activity>
-        <activity android:name=".profile" />
+        <activity android:name=".profile" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".edItProfile" />
         <activity android:name=".viewAllTasksScrollView" />
         <activity android:name=".viewAllTasks" />
@@ -19,11 +25,7 @@
         </activity>
         <activity android:name=".accCreationPage" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
