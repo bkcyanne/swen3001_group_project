@@ -53,7 +53,7 @@ import java.lang.Thread.sleep
 
                     Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
                     sleep(3000)
-                    val intent = Intent(this, newTask::class.java)
+                    val intent = Intent(this, accCreationPage::class.java)
                     startActivity(intent)
 
                 } else {
