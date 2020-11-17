@@ -51,10 +51,10 @@ class GoogleProfile : AppCompatActivity() ,GoogleApiClient.OnConnectionFailedLis
 
                 Auth.GoogleSignInApi.signOut(jumpStartGoogleApiClient).setResultCallback {
                  fun onResult(@NonNull status:Status){
-
+                    Toast.makeText(this,"Signed Out",Toast.LENGTH_SHORT).show()
                     if(status.isSuccess){
-                           navToProfile()
-
+                         val intent = Intent(this,MainActivity::class.java)
+                        startActivity(intent)
                     }else{
 
                         Toast.makeText(this,"Something went wrong Here within the logout",Toast.LENGTH_LONG).show()

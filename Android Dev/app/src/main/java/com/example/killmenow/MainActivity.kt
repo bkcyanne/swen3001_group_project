@@ -100,9 +100,10 @@ import java.lang.Thread.sleep
 
                 jumpStartGoogleSignInResult = Auth.GoogleSignInApi.getSignInResultFromIntent(data)!!
                 if(jumpStartGoogleSignInResult.isSuccess()){
-                    Toast.makeText(this,"Login Successful",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Successfull up to this lane",Toast.LENGTH_SHORT).show()
+                    sleep(3000)
 
-                   val jumpStartGoogleIntent = Intent(this,profile::class.java)
+                   val jumpStartGoogleIntent = Intent(this,GoogleProfile::class.java)
                     startActivity(jumpStartGoogleIntent)
                 }
          }
