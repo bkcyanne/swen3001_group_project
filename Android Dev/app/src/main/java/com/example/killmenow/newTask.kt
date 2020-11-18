@@ -10,6 +10,9 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.widget.*
 import androidx.core.text.toSpannable
+import androidx.lifecycle.ViewModelProvider
+import com.example.taskdatabase.Task
+import com.example.taskdatabase.TaskViewModel
 import kotlinx.android.synthetic.main.activity_new_task.*
 import java.lang.Thread.sleep
 import java.text.Format
@@ -30,10 +33,14 @@ class newTask : AppCompatActivity() {
     var endTimeHMinute: Int = 0
     lateinit var timeSet:String
 
+    private lateinit var taskViewModel: TaskViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_task)
+
+        taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+
         ctTaskNameInput=findViewById<EditText>(R.id.TaskName)
         ctTaskDescriptionInput=findViewById<EditText>(R.id.TaskDescription)
         startTime=findViewById<TextView>(R.id.StartHourTime)
@@ -82,18 +89,52 @@ class newTask : AppCompatActivity() {
 
         }
 
+        /*
+        Check if input fields are blank before entering into database
+         */
+        fun inputCheck(taskName: String, descr: String): Int {
+            if(taskName.length > 0 && descr.length > 0) {
+                return 1
+            } else {
+                return 0
+            }
+        }
 
         val addTaskButtonClicked =findViewById<Button>(R.id.addTaskButton)
         addTaskButtonClicked.setOnClickListener {
             ctTaskName=ctTaskNameInput.text.toString()
             ctTaskDescription=ctTaskDescriptionInput.text.toString()
 
-            Toast.makeText(this, ctTaskName+"Added Successfully",Toast.LENGTH_SHORT).show()
-            val intent= Intent(this,viewAllTasks::class.java)
-            startActivity(intent)
+            /*
+            INPUT TASK INTO TASK DATABASE
+             */
+            if(inputCheck(ctTaskName, ctTaskDescription) == 1) {
+                val task = Task(0, ctTaskName, ctTaskDescription)
+                taskViewModel.addTask(task)
 
-
-
+                Toast.makeText(this, ctTaskName+"Added Successfully",Toast.LENGTH_SHORT).show()
+                val intent= Intent(this,viewAllTasks::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Fill in all fields",Toast.LENGTH_SHORT).show()
+            }
         }
+
+
+
     }
 }
+
+/*
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.activity_new_task, container, false)
+
+        view.addTaskButton.setOnClickListener{
+
+        }
+
+        return view
+    }*/
