@@ -1,15 +1,20 @@
 package com.example.killmenow
 
 import android.content.Intent
+import android.hardware.biometrics.BiometricPrompt
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
 import android.widget.Toast
+<<<<<<< HEAD
+import androidx.annotation.RequiresApi
+=======
+import androidx.lifecycle.ViewModelProvider
+import com.example.database.UserViewModel
+>>>>>>> 35d1be13a26539da485f5bc5faf0a46ead2112ac
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.credentials.CredentialPickerConfig.Prompt.SIGN_IN
@@ -33,12 +38,33 @@ import java.lang.Thread.sleep
     lateinit var uNInput: EditText
     lateinit var pWInput: EditText
     private var counter: Int = 2
-    lateinit var jumpStartSignInButton: EditText
+    lateinit var jumpStartSignInButton: Button
     lateinit var jumpStartGoogleSignInResult :GoogleSignInResult
+     lateinit var createAccUserViewModel: UserViewModel
+
+     private var cancellationSignal: CancellationSignal? = null
+     private val authenticationCallback: BiometricPrompt.AuthenticationCallback
+     get() =
+         @RequiresApi(Build.VERSION_CODES.P)
+         object : BiometricPrompt.AuthenticationCallback(){
+             override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
+                 super.onAuthenticationError(errorCode, errString)
+                 notifyUser("Authentication error: $errString")
+             }
+
+             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
+                 super.onAuthenticationSucceeded(result)
+                 notifyUser("Authentication successful!")
+                 //startActivity(Intent(this@MainActivity, ))
+             }
+         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        createAccUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         uNInput = findViewById<EditText>(R.id.Username)
         pWInput = findViewById<EditText>(R.id.Password)
@@ -53,7 +79,9 @@ import java.lang.Thread.sleep
 
                     Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
                     sleep(3000)
-                    val intent = Intent(this, newTask::class.java)
+
+
+                    val intent = Intent(this, accCreationPage::class.java)
                     startActivity(intent)
 
                 } else {
@@ -77,7 +105,7 @@ import java.lang.Thread.sleep
         val jumpStartGoogleApiClient = GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(
             Auth.GOOGLE_SIGN_IN_API,jumpStartGSO).build()
 
-        jumpStartSignInButton=findViewById<EditText>(R.id.GoogleSignUp)
+        jumpStartSignInButton=findViewById<Button>(R.id.GoogleSignUp)
         jumpStartSignInButton.setOnClickListener{
 
 
@@ -107,6 +135,13 @@ import java.lang.Thread.sleep
                     startActivity(jumpStartGoogleIntent)
                 }
          }
+     }
+
+     //Andryck's attempt at a fingerprint sensor starts here
+
+     /*This function displays a message to the user*/
+     private fun notifyUser(message: String){
+         Toast.makeText(this, message,Toast.LENGTH_SHORT).show()
      }
 
  }
