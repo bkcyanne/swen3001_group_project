@@ -23,7 +23,7 @@ class accCreationPage : AppCompatActivity() {
     lateinit var caPasswordInput: EditText
     lateinit var caPassworConfInput: EditText
 
-    private lateinit var createAccUserViewModel: UserViewModel
+    //lateinit var createAccUserViewModel: UserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,8 @@ class accCreationPage : AppCompatActivity() {
         caPassworConfInput = findViewById(R.id.cAPasswordConf)
         val emailPattern = Regex("^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}\$")
         val createAccButton = findViewById<Button>(R.id.createButton)
-        createAccUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+
+        //createAccUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         createAccButton.setOnClickListener {
             fN = fNInput.text.toString()
             email = emailInput.text.toString()
@@ -53,7 +54,8 @@ class accCreationPage : AppCompatActivity() {
             } else {
 
 
-                insertUserDataToDatabase(fN,email,caPassword)
+                //insertUserDataToDatabase(fN,email,caPassword)
+
 
                 Toast.makeText(this, "Account Successfully Created", Toast.LENGTH_SHORT).show()
                 sleep(3000)
@@ -64,12 +66,13 @@ class accCreationPage : AppCompatActivity() {
 
         }
     }
-    fun insertUserDataToDatabase(fN:String,email:String,password:String){
+
+  /*  fun insertUserDataToDatabase(fN:String,email:String,password:String){
         if(noneEmpty(fN,email,password)) {
-            val user = User(0,fN,email,password)
+            val user = User(0,fN,email,caPassword)
             createAccUserViewModel.addUser(user)
 
-            Toast.makeText(this,"Successfully stored to database",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Successfully stored  to database",Toast.LENGTH_SHORT).show()
             sleep(1000)
         }else{
             Toast.makeText(this,"Something went wrong with database storing",Toast.LENGTH_SHORT).show()
@@ -79,6 +82,6 @@ class accCreationPage : AppCompatActivity() {
         return !( TextUtils.isEmpty(fullName) && TextUtils.isEmpty(email) &&TextUtils.isEmpty(caPassword) )
 
         }
-
+    */
 
 }

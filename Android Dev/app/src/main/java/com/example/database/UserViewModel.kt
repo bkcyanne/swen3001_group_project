@@ -24,6 +24,7 @@ class UserViewModel(application: Application):AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO){
 
             repo.addUser(user)
+
         }
     }
 

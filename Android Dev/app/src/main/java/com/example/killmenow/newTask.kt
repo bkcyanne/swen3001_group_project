@@ -89,7 +89,6 @@ class newTask : AppCompatActivity() {
             ctTaskDescription=ctTaskDescriptionInput.text.toString()
 
             Toast.makeText(this, ctTaskName+"Added Successfully",Toast.LENGTH_SHORT).show()
-            sleep(3000)
             val intent= Intent(this,viewAllTasks::class.java)
             startActivity(intent)
 
