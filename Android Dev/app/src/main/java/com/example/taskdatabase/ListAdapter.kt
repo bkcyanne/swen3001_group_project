@@ -27,7 +27,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         val currentItem = taskList[position]
         holder.itemView.textId.text = currentItem.id.toString()
         holder.itemView.textName.text = currentItem.name.toString()
-        holder.itemView.textDescr.text = currentItem.descr.toString()
+        holder.itemView.textDescr.text = currentItem.description.toString()
     }
 
     fun setData(task: List<Task>) {

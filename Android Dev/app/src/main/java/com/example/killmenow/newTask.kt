@@ -18,6 +18,7 @@ import java.lang.Thread.sleep
 import java.text.Format
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.Calendar.*
 
 class newTask : AppCompatActivity() {
     lateinit var ctTaskName: String
@@ -27,8 +28,6 @@ class newTask : AppCompatActivity() {
     lateinit var startTime:TextView
     lateinit var endTime:TextView
     lateinit var datePick:DatePicker
-    var startTimeHour: Int = 0
-    var startTimeMinute: Int = 0
     var endTimeHour: Int = 0
     var endTimeHMinute: Int = 0
     lateinit var timeSet:String
@@ -48,31 +47,35 @@ class newTask : AppCompatActivity() {
 
         ctTaskName=ctTaskNameInput.text.toString()
 
+
+        val startCalendar = Calendar.getInstance()
+        val endCalendar = Calendar.getInstance()
+
         startTime.setOnClickListener {
 
-            val cal = Calendar.getInstance()
+            //val cal = Calendar.getInstance()
             val timeSetListener = TimePickerDialog.OnTimeSetListener{
                 timePicker,hour,minute ->
-                cal.set(Calendar.HOUR_OF_DAY,hour)
-                cal.set(Calendar.MINUTE,minute)
-                startTime.text = SimpleDateFormat("HH:mm").format(cal.time)
+                startCalendar.set(Calendar.HOUR_OF_DAY,hour)
+                startCalendar.set(Calendar.MINUTE,minute)
+                startTime.text = SimpleDateFormat("HH:mm").format(startCalendar.time)
 
             }
-            TimePickerDialog(this,timeSetListener,cal.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
+            TimePickerDialog(this,timeSetListener,startCalendar.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
         }
 
 
         endTime.setOnClickListener {
 
-            val cal = Calendar.getInstance()
+            //val cal = Calendar.getInstance()
             val timeSetListener = TimePickerDialog.OnTimeSetListener{
                     timePicker,hour,minute ->
-                cal.set(Calendar.HOUR_OF_DAY,hour)
-                cal.set(Calendar.MINUTE,minute)
-                endTime.text = SimpleDateFormat("HH:mm").format(cal.time)
+                endCalendar.set(Calendar.HOUR_OF_DAY,hour)
+                endCalendar.set(Calendar.MINUTE,minute)
+                endTime.text = SimpleDateFormat("HH:mm").format(endCalendar.time)
 
             }
-            TimePickerDialog(this,timeSetListener,cal.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
+            TimePickerDialog(this,timeSetListener,endCalendar.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
         }
 
 
@@ -100,16 +103,54 @@ class newTask : AppCompatActivity() {
             }
         }
 
+        var startTimeHour: Int
+        var startTimeMinute: Int
+        var startMonth: Int
+        var startDay: Int
+
+        var endTimeHour: Int
+        var endTimeMinute: Int
+        var endMonth: Int
+        var endDay: Int
+
         val addTaskButtonClicked =findViewById<Button>(R.id.addTaskButton)
         addTaskButtonClicked.setOnClickListener {
+
+            /*
+            Get data from calendar to create Task
+             */
             ctTaskName=ctTaskNameInput.text.toString()
             ctTaskDescription=ctTaskDescriptionInput.text.toString()
+
+            //Start Time
+            startTimeHour = startCalendar.get(HOUR)
+            startTimeMinute = startCalendar.get(MINUTE)
+            startMonth = startCalendar.get(MONTH)
+            startDay = startCalendar.get(DAY_OF_WEEK)
+
+            //End Time
+            endTimeHour = endCalendar.get(HOUR)
+            endTimeMinute = endCalendar.get(MINUTE)
+            endMonth = endCalendar.get(MONTH)
+            endDay = endCalendar.get(DAY_OF_WEEK)
+
 
             /*
             INPUT TASK INTO TASK DATABASE
              */
             if(inputCheck(ctTaskName, ctTaskDescription) == 1) {
-                val task = Task(0, ctTaskName, ctTaskDescription)
+                val task = Task(0,
+                    ctTaskName,
+                    ctTaskDescription,
+                    startMonth,
+                    startDay,
+                    startTimeHour,
+                    startTimeMinute,
+                    endMonth,
+                    endDay,
+                    endTimeHour,
+                    endTimeMinute)
+
                 taskViewModel.addTask(task)
 
                 Toast.makeText(this, ctTaskName+"Added Successfully",Toast.LENGTH_SHORT).show()
