@@ -8,6 +8,7 @@ import android.widget.EditText
 
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.database.User
 import com.example.database.UserViewModel
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.credentials.CredentialPickerConfig.Prompt.SIGN_IN
@@ -33,7 +34,7 @@ import java.lang.Thread.sleep
     lateinit var jumpStartGoogleSignInResult :GoogleSignInResult
      lateinit var createAccUserViewModel: UserViewModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+     override fun onCreate(savedInstanceState: Bundle?) {
 
         createAccUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         super.onCreate(savedInstanceState)
