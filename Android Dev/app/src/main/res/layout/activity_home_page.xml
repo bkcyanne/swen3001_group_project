@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".HomePage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="266dp">
+
+
+        <ImageView
+            android:id="@+id/profileblob"
+            android:layout_width="match_parent"
+            android:layout_height="367dp"
+
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/profileblob"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="303dp"
+            android:layout_height="109dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="193dp"
+            android:layout_marginEnd="57dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/usrfullnametxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pro_fullname"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/usremailtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pro_email"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+
+
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/addProfilePic"
+            android:layout_width="251dp"
+            android:layout_height="194dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="91dp"
+            android:layout_marginBottom="60dp"
+            android:contentDescription="@string/addProfile"
+            app:srcCompat="@drawable/profilecircleicon" />
+
+        <ImageView
+            android:id="@+id/editProfileFromHomePage"
+            android:layout_width="34dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="346dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="201dp"
+            android:contentDescription="@string/EditProfile"
+            android:rotation="9"
+            app:srcCompat="@drawable/edittheicon" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="211dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totaltasklbl2"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/pro_totaltask"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/totaltasktxt"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/pro_totaltask_counter"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/activetasklbl"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/pro_activetask"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="italic"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/activetasktxt"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/pro_activetask_counter"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todo_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="229dp"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_row" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomNav"
+            android:layout_alignParentBottom="true"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/menu"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

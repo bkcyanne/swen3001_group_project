@@ -10,6 +10,7 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.widget.*
 import androidx.core.text.toSpannable
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import kotlinx.android.synthetic.main.activity_new_task.*
 import java.lang.Thread.sleep
 import java.text.Format
@@ -29,7 +30,8 @@ class newTask : AppCompatActivity() {
     var endTimeHour: Int = 0
     var endTimeHMinute: Int = 0
     lateinit var timeSet:String
-
+    lateinit var tasksIcon: BottomNavigationItemView
+    lateinit var settingsIcon:BottomNavigationItemView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,5 +97,21 @@ class newTask : AppCompatActivity() {
 
 
         }
+        tasksIcon=findViewById<BottomNavigationItemView>(R.id.tasks)
+        tasksIcon.setOnClickListener{
+
+            val intent = Intent(this, viewAllTasks::class.java)
+            startActivity(intent)
+
+        }
+
+        settingsIcon=findViewById<BottomNavigationItemView>(R.id.settings)
+        settingsIcon.setOnClickListener{
+
+            val intent = Intent(this, settings::class.java)
+            startActivity(intent)
+
+        }
+
     }
 }

@@ -15,7 +15,6 @@ import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInResult
 import com.google.android.gms.common.api.OptionalPendingResult
-import com.google.android.gms.common.api.Result
 import com.google.android.gms.common.api.Status
 import com.squareup.picasso.Picasso
 
@@ -70,7 +69,7 @@ class GoogleProfile : AppCompatActivity() ,GoogleApiClient.OnConnectionFailedLis
     fun navToProfile(){
 
 
-        val intent = Intent(this,profile::class.java)
+        val intent = Intent(this,HomePage::class.java)
         startActivity(intent)
     }
 

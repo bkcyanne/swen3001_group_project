@@ -3,16 +3,12 @@ package com.example.killmenow
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.database.UserViewModel
-import com.google.android.gms.common.SignInButton
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.credentials.CredentialPickerConfig.Prompt.SIGN_IN
 
@@ -23,8 +19,6 @@ import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.ConnectionResult
 
 
-import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.annotations.NonNls
 import java.lang.Thread.sleep
 
 
@@ -61,7 +55,7 @@ import java.lang.Thread.sleep
                     sleep(3000)
 
 
-                    val intent = Intent(this, accCreationPage::class.java)
+                    val intent = Intent(this, HomePage::class.java)
                     startActivity(intent)
 
                 } else {
@@ -98,7 +92,7 @@ import java.lang.Thread.sleep
 
 
      override fun onConnectionFailed(p0: ConnectionResult) {
-         TODO("Not yet implemented")
+        return
      }
 
      override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -111,11 +105,15 @@ import java.lang.Thread.sleep
                     Toast.makeText(this,"Successfull up to this lane",Toast.LENGTH_SHORT).show()
                     sleep(3000)
 
-                   val jumpStartGoogleIntent = Intent(this,GoogleProfile::class.java)
+                   val jumpStartGoogleIntent = Intent(this,accCreationPage::class.java)
                     startActivity(jumpStartGoogleIntent)
                 }
          }
      }
+     fun navToHomePage(){
+         val homePageIntent = Intent(this,HomePage::class.java)
+         startActivity(homePageIntent)
 
+     }
  }
 

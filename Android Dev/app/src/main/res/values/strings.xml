@@ -52,6 +52,7 @@
     <string name="EditProfile">Edit Profile</string>
     <string name="Gender">Gender</string>
     <string name="LinkedAccounts">Linked Accounts:</string>
+    <string name = "Save">SAVE</string>
 
 
     /*Settings*/
@@ -80,6 +81,7 @@
     <string name="tasktitle">Warrior</string>
     <string name="googleaccount">tesing@gmail.com</string>
     <string name="facebookaccount">John Brown</string>
+    <string name = "RecyclerViewItems">Recycler Data Here</string>
 
     /*Google Profile*/
 

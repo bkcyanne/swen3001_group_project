@@ -10,8 +10,9 @@ import com.example.killmenow.R
 import kotlinx.android.synthetic.main.activity_acc_creation_page.view.*
 import kotlinx.android.synthetic.main.activity_edit_profile.view.*
 import kotlinx.android.synthetic.main.activity_edit_profile.view.fullName
+import kotlinx.android.synthetic.main.custom_row.view.*
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>(){
+/*class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>(){
 
     private var userList = emptyList<User>()
 
@@ -25,10 +26,17 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: ListAdapter.MyViewHolder, position: Int) {
+        val currentItem = userList[position]
+        holder.itemView.idText.text=currentItem.toString()
+        holder.itemView.customFullName.text=currentItem.firstName
+        holder.itemView.customEmail.text=currentItem.toString()
+        holder.itemView.customPassword.text=currentItem.toString()
+
+
 
     }
 
     override fun getItemCount(): Int {
        return userList.size
     }
-}
+}*/
