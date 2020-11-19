@@ -6,178 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".viewAllTasks">
 
-    <TextView
-        android:id="@+id/ViewAllTasks"
-        android:layout_width="200dp"
-        android:layout_height="57dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="645dp"
-        android:text="@string/AllTasks"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="62dp" />
-
-    <TextView
-        android:id="@+id/todayText"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="236dp"
-        android:layout_marginBottom="577dp"
-        android:text="@string/Today"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/tomorrowText"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="230dp"
-        android:layout_marginBottom="382dp"
-        android:text="@string/Tomorrow"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/upcoming"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="222dp"
-        android:layout_marginBottom="140dp"
-        android:text="@string/Upcoming"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/TodayDynamicTask1"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="515dp"
-        android:text="@string/DynamicTask1" />
-
-    <TextView
-        android:id="@+id/TodayDynamicTask2"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="223dp"
-        android:layout_marginBottom="426dp"
-        android:text="@string/DynamicTask2" />
-
-
-    <TextView
-        android:id="@+id/TodayDynamicTask3"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="235dp"
-        android:layout_marginBottom="473dp"
-        android:text="@string/DynamicTask3" />
-
-    <TextView
-        android:id="@+id/TomorrowDynamicTask1"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginBottom="316dp"
-        android:text="@string/DynamicTask1" />
-
-    <TextView
-        android:id="@+id/TomorrowDynamicTask2"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="226dp"
-        android:layout_marginBottom="271dp"
-        android:text="@string/DynamicTask2" />
-
-    <TextView
-        android:id="@+id/TomorrowDynamicTask3"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="226dp"
-        android:layout_marginBottom="218dp"
-        android:text="@string/DynamicTask3" />
-
-    <TextView
-        android:id="@+id/UpcomingDynamicTask1"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="225dp"
-        android:layout_marginBottom="91dp"
-        android:text="@string/DynamicTask1" />
-
-    <TextView
-        android:id="@+id/UpcomingDynamicTask2"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="225dp"
-        android:layout_marginBottom="48dp"
-        android:text="@string/DynamicTask2" />
-
-    <TextView
-        android:id="@+id/UpcomingDynamicTask3"
-        android:layout_width="154dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="225dp"
-        android:layout_marginBottom="7dp"
-        android:text="@string/DynamicTask3" />
-
-    <ImageView
-        android:id="@+id/TodaysUnchecked1"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="368dp"
-        android:layout_marginBottom="521dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
 
     <ImageView
         android:id="@+id/TodaysChecked1"
@@ -193,18 +21,6 @@
         android:contentDescription="@string/UncheckedIcon" />
 
     <ImageView
-        android:id="@+id/TodaysUnchecked2"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="368dp"
-        android:layout_marginBottom="478dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
-
-    <ImageView
         android:id="@+id/TodaysChecked2"
         android:layout_width="35dp"
         android:layout_height="30dp"
@@ -216,18 +32,6 @@
         app:srcCompat="@drawable/checkedicon"
 
         android:contentDescription="@string/UncheckedIcon" />
-
-    <ImageView
-        android:id="@+id/TodaysUnchecked3"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="367dp"
-        android:layout_marginBottom="435dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
 
     <ImageView
         android:id="@+id/TodaysChecked3"
@@ -243,18 +47,6 @@
         android:contentDescription="@string/UncheckedIcon" />
 
     <ImageView
-        android:id="@+id/TomorrowsUnchecked1"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="370dp"
-        android:layout_marginBottom="319dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
-
-    <ImageView
         android:id="@+id/TomorrowsChecked1"
         android:layout_width="35dp"
         android:layout_height="30dp"
@@ -266,18 +58,6 @@
         app:srcCompat="@drawable/checkedicon"
 
         android:contentDescription="@string/UncheckedIcon" />
-
-    <ImageView
-        android:id="@+id/TomorrowsUnchecked2"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="369dp"
-        android:layout_marginBottom="279dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
 
     <ImageView
         android:id="@+id/TomorrowsChecked2"
@@ -293,18 +73,6 @@
         android:contentDescription="@string/UncheckedIcon" />
 
     <ImageView
-        android:id="@+id/TomorrowsUnchecked3"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="367dp"
-        android:layout_marginBottom="223dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
-
-    <ImageView
         android:id="@+id/TomorrowsChecked3"
         android:layout_width="35dp"
         android:layout_height="30dp"
@@ -316,18 +84,6 @@
         app:srcCompat="@drawable/checkedicon"
 
         android:contentDescription="@string/UncheckedIcon" />
-
-    <ImageView
-        android:id="@+id/UpcomingUnchecked1"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="366dp"
-        android:layout_marginBottom="97dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
 
     <ImageView
         android:id="@+id/UpcomingChecked1"
@@ -343,18 +99,6 @@
         android:contentDescription="@string/UncheckedIcon" />
 
     <ImageView
-        android:id="@+id/UpcomingUnchecked2"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="366dp"
-        android:layout_marginBottom="56dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
-
-    <ImageView
         android:id="@+id/UpcomingChecked2"
         android:layout_width="35dp"
         android:layout_height="30dp"
@@ -367,17 +111,23 @@
 
         android:contentDescription="@string/UncheckedIcon" />
 
-    <ImageView
-        android:id="@+id/UpcomingUnchecked3"
-        android:layout_width="35dp"
-        android:layout_height="30dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewtasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="102dp"
+        android:layout_height="177dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="366dp"
-        android:layout_marginBottom="11dp"
-        android:contentDescription="@string/UncheckedIcon"
-        android:visibility="visible"
-        app:srcCompat="@drawable/uncheckedicon" />
+        android:layout_marginEnd="315dp"
+        android:layout_marginBottom="62dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+         />
 
 
 </RelativeLayout>

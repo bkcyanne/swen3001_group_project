@@ -50,7 +50,7 @@ import java.lang.Thread.sleep
                 uN = uNInput.text.toString()
                 pW = pWInput.text.toString()
 
-                if (uN == "AdminCorey" && pW == "tasteepatty") {
+                if (uN == "" && pW == "") {
 
                     Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
                     sleep(3000)
