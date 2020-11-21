@@ -43,6 +43,7 @@
     <string name="DynamicTask3">Review tomorrows forecast</string>
     <string name="DynamicTask4">Upcoming Tasks to set</string>
     <string name="DynamicTask5">Upcoming Tasks to set</string>
+    <string name = "Date">Date:</string>
 
     <string name="UncheckedIcon">""</string>
 

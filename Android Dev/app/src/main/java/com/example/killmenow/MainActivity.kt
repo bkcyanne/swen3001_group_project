@@ -33,7 +33,7 @@ import java.lang.Thread.sleep
     lateinit var jumpStartSignInButton: Button
     lateinit var jumpStartGoogleSignInResult :GoogleSignInResult
      lateinit var createAccUserViewModel: UserViewModel
-
+     lateinit var userList :List<User>
      override fun onCreate(savedInstanceState: Bundle?) {
 
         createAccUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
@@ -49,10 +49,12 @@ import java.lang.Thread.sleep
             loginAccButton.setOnClickListener {
                 uN = uNInput.text.toString()
                 pW = pWInput.text.toString()
+                var tempUser=userList[0].email
+                Toast.makeText(this, "Welcome back $tempUser!", Toast.LENGTH_SHORT).show()
 
-                if (uN == "" && pW == "") {
+                    if(uN=="AdminCorey"&&pW=="tasteepatty"){
 
-                    Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Welcome back $tempUser!", Toast.LENGTH_SHORT).show()
                     sleep(3000)
 
 

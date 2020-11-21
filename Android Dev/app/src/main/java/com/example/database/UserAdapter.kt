@@ -3,6 +3,7 @@ package com.example.database
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 
 
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_edit_profile.view.*
 import kotlinx.android.synthetic.main.activity_edit_profile.view.fullName
 import kotlinx.android.synthetic.main.custom_row.view.*
 
-/*class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>(){
+class UserAdapter: RecyclerView.Adapter<UserAdapter.MyViewHolder>(){
 
     private var userList = emptyList<User>()
 
@@ -21,16 +22,14 @@ import kotlinx.android.synthetic.main.custom_row.view.*
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter.MyViewHolder {
         return MyViewHolder((LayoutInflater.from(parent.context).inflate(R.layout.activity_acc_creation_page,parent,false)))
     }
 
-    override fun onBindViewHolder(holder: ListAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder:MyViewHolder, position: Int) {
         val currentItem = userList[position]
-        holder.itemView.idText.text=currentItem.toString()
-        holder.itemView.customFullName.text=currentItem.firstName
-        holder.itemView.customEmail.text=currentItem.toString()
-        holder.itemView.customPassword.text=currentItem.toString()
+
+
 
 
 
@@ -39,4 +38,4 @@ import kotlinx.android.synthetic.main.custom_row.view.*
     override fun getItemCount(): Int {
        return userList.size
     }
-}*/
+}

@@ -25,6 +25,7 @@ class accCreationPage : AppCompatActivity() {
 
     lateinit var createAccUserViewModel: UserViewModel
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acc_creation_page)
