@@ -49,17 +49,17 @@ import java.lang.Thread.sleep
             loginAccButton.setOnClickListener {
                 uN = uNInput.text.toString()
                 pW = pWInput.text.toString()
-                var tempUser=userList[0].email
-                Toast.makeText(this, "Welcome back $tempUser!", Toast.LENGTH_SHORT).show()
+
 
                     if(uN=="AdminCorey"&&pW=="tasteepatty"){
 
-                    Toast.makeText(this, "Welcome back $tempUser!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
                     sleep(3000)
 
 
                     val intent = Intent(this, HomePage::class.java)
                     startActivity(intent)
+                        finish()
 
                 } else {
                     Toast.makeText(
@@ -75,6 +75,7 @@ import java.lang.Thread.sleep
         noAccButton.setOnClickListener {
             val intent = Intent(this, accCreationPage::class.java)
             startActivity(intent)
+            finish()
 
         }
 
@@ -116,6 +117,7 @@ import java.lang.Thread.sleep
      fun navToHomePage(){
          val homePageIntent = Intent(this,HomePage::class.java)
          startActivity(homePageIntent)
+         finish()
 
      }
  }

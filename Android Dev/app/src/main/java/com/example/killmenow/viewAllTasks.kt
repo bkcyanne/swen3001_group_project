@@ -23,20 +23,16 @@ import kotlinx.android.synthetic.main.activity_view_all_tasks.view.*
 class viewAllTasks : AppCompatActivity() {
 
     private lateinit var mTaskViewModel: TaskViewModel
-    private lateinit var radioIcon:RadioButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_all_tasks)
 
-        radioIcon = findViewById<RadioButton>(R.id.radioButton)
-        radioIcon.setOnClickListener{
-            val navToNewTask = Intent(this,newTask::class.java)
-            startActivity(navToNewTask)
 
 
-        }
-        val addTask = findViewById<FloatingActionButton>(R.id.floatingActionButton)
+
+
+
 
         // Recyclerview
         val adapter = ListAdapter()
@@ -50,9 +46,11 @@ class viewAllTasks : AppCompatActivity() {
             adapter.setData(user)
         })
 
+        val addTask = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         addTask.setOnClickListener{
             val intent = Intent(this, newTask::class.java)
             startActivity(intent)
+
         }
     }
 
