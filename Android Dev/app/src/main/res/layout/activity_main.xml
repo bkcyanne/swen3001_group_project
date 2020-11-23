@@ -73,7 +73,7 @@
         <ImageView
             android:id="@+id/GoogleIcon"
             android:layout_width="53dp"
-            android:layout_height="27dp"
+            android:layout_height="45dp"
             android:layout_weight="4"
             android:contentDescription="@string/googlesignup"
             android:scaleType="fitXY"
@@ -97,14 +97,15 @@
 
     <ImageView
         android:id="@+id/FingereprintIcon"
-        android:layout_width="121dp"
-        android:layout_height="0dp"
+        android:layout_width="105dp"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:background="@drawable/biofingerprint"
+        android:layout_marginBottom="10dp"
+        android:layout_height="0dp"
 
-
-        android:contentDescription="@string/fingerprint_dialog_touch_sensor" />
+        android:contentDescription="@string/fingerprint_dialog_touch_sensor"
+         />
 
 
 

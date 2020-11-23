@@ -43,10 +43,10 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
     private var counter: Int = 2
     lateinit var jumpStartSignInButton: Button
     lateinit var jumpStartGoogleSignInResult :GoogleSignInResult
-     lateinit var createAccUserViewModel: UserViewModel
-     lateinit var userList :List<User>
-     lateinit var fingerIcon:ImageView
-     lateinit var bioManager:BiometricManager
+    lateinit var createAccUserViewModel: UserViewModel
+    lateinit var userList :List<User>
+    lateinit var fingerIcon:ImageView
+    lateinit var bioManager:BiometricManager
     lateinit var bioPrompt:BiometricPrompt
     lateinit var promptInfo: BiometricPrompt.PromptInfo
 
@@ -95,7 +95,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
          val noAccButton = findViewById<Button>(R.id.noAccButton)
          noAccButton.setOnClickListener {
-             val intent = Intent(this, accCreationPage::class.java)
+             val intent = Intent(this, WeatherPortion::class.java)
              startActivity(intent)
              finish()
 
