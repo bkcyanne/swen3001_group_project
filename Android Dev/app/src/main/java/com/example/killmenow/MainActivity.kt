@@ -13,11 +13,13 @@ import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.from
 import androidx.biometric.BiometricPrompt
 import android.hardware.biometrics.BiometricPrompt.AuthenticationCallback
+import android.util.Log
 import androidx.biometric.BiometricPrompt.*
 import androidx.core.content.ContextCompat
 
 import androidx.lifecycle.ViewModelProvider
 import com.example.database.User
+import com.example.database.UserDao
 import com.example.database.UserViewModel
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.credentials.CredentialPickerConfig.Prompt.SIGN_IN
@@ -49,7 +51,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
     lateinit var bioManager:BiometricManager
     lateinit var bioPrompt:BiometricPrompt
     lateinit var promptInfo: BiometricPrompt.PromptInfo
-
+     lateinit var userDao: UserDao
     lateinit var executor: Executor
 
      @RequiresApi(Build.VERSION_CODES.Q)
@@ -72,6 +74,8 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
 
                  if (uN == "AdminCorey" && pW == "tasteepatty") {
+                    val tempItem=userDao.readAllUserData()
+                   Log.d("Success","$tempItem")
 
                      Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
                      sleep(3000)
@@ -95,7 +99,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
          val noAccButton = findViewById<Button>(R.id.noAccButton)
          noAccButton.setOnClickListener {
-             val intent = Intent(this, WeatherPortion::class.java)
+             val intent = Intent(this, accCreationPage::class.java)
              startActivity(intent)
              finish()
 
