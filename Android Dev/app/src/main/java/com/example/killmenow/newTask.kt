@@ -13,6 +13,7 @@ import androidx.core.text.toSpannable
 import androidx.lifecycle.ViewModelProvider
 import com.example.taskdatabase.Task
 import com.example.taskdatabase.TaskViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import kotlinx.android.synthetic.main.activity_new_task.*
 import java.lang.Thread.sleep
 import java.text.Format
@@ -31,6 +32,8 @@ class newTask : AppCompatActivity() {
     var endTimeHour: Int = 0
     var endTimeHMinute: Int = 0
     lateinit var timeSet:String
+    lateinit var tasksIcon: BottomNavigationItemView
+    lateinit var settingsIcon: BottomNavigationItemView
 
     private lateinit var taskViewModel: TaskViewModel
 
@@ -161,7 +164,23 @@ class newTask : AppCompatActivity() {
             }
         }
 
+        tasksIcon = findViewById<BottomNavigationItemView>(R.id.tasks)
+        tasksIcon.setOnClickListener {
 
+            val intent = Intent(this, viewAllTasks::class.java)
+            startActivity(intent)
+
+
+        }
+
+        settingsIcon = findViewById<BottomNavigationItemView>(R.id.settings)
+        settingsIcon.setOnClickListener {
+
+            val intent = Intent(this, settings::class.java)
+            startActivity(intent)
+
+
+        }
 
     }
 }

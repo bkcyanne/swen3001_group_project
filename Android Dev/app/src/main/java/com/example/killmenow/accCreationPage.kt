@@ -36,7 +36,7 @@ class accCreationPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acc_creation_page)
-        fNInput = findViewById(R.id.fullName)
+        fNInput = findViewById(R.id.Username)
         emailInput = findViewById(R.id.email)
         caPasswordInput = findViewById(R.id.cAPassword)
         caPassworConfInput = findViewById(R.id.cAPasswordConf)

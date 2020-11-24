@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/weathergradientbg"
     android:orientation="vertical"
+
     tools:context=".WeatherPortion">
 
 
@@ -14,8 +14,8 @@
       android:id="@+id/Location"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Location!"
-      android:textColor="#FFFFFF"
+      android:text="@string/Location"
+      android:textColor="#36809F"
       android:textSize="24sp"
       android:layout_gravity="center"
       android:layout_marginLeft="30dp"
@@ -31,8 +31,8 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
-      android:text="updated at"
-      android:textColor="#FFFFFF">
+      android:text="@string/updatedAt"
+      android:textColor="#36809F">
 
 
   </TextView>
@@ -42,58 +42,9 @@
       android:layout_height="wrap_content"
       android:orientation="horizontal"
       android:layout_gravity="center">
-    <TextView
-        android:id="@+id/Humidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Humidity:"
-        android:textColor="#ffffff"
-        android:textSize="18sp">
 
 
-    </TextView>
-  <TextView
-      android:id="@+id/climate"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:text="Clear Sky"
-      android:textColor="#ffffff"
-      android:textSize="18sp">
 
-
-  </TextView>
-  </LinearLayout>
-
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_gravity="center">
-
-    <TextView
-        android:id="@+id/WindSpeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Windspeed:"
-        android:textColor="#ffffff"
-        android:textSize="18sp">
-
-
-    </TextView>
-  <TextView
-      android:id="@+id/wind"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:text="Windy"
-      android:textColor="#ffffff"
-      android:textSize="18sp">
-
-
-  </TextView>
 
 </LinearLayout>
   <TextView
@@ -102,11 +53,216 @@
       android:layout_height="wrap_content"
       android:layout_gravity="center"
       android:text="24°C"
-      android:textColor="#ffffff"
+      android:textColor="#36809F"
       android:textSize="76sp">
 
 
   </TextView>
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="50dp"
+      android:padding="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:padding="8dp"
+          >
+        <ImageView
+                android:id="@+id/windIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/wind"
+
+                app:tint="#34B0E4"
+            android:contentDescription="@string/warning">
+        </ImageView>
+
+      <TextView
+          android:id="@+id/WindSpeed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+
+          android:text="Windspeed"
+          android:textColor="#34B0E4"
+          android:textSize="12sp">
+
+
+      </TextView>
+          <TextView
+              android:id="@+id/wind"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+
+              android:text="Windy"
+              android:textColor="#34B0E4"
+              android:textSize="12sp">
+
+
+          </TextView>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:padding="8dp"
+          >
+        <ImageView
+            android:id="@+id/PressureIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/humidity"
+            app:tint="#34B0E4"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/Humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/Humidity"
+            android:textColor="#34B0E4"
+            android:textSize="12sp">
+
+
+        </TextView>
+        <TextView
+            android:id="@+id/climate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/humidvale"
+            android:textColor="#34B0E4"
+            android:textSize="12sp">
+
+
+        </TextView>
+
+
+
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:padding="8dp"
+          >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pressure"
+            app:tint="#34B0E4"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/PressureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/Presssure"
+            android:textColor="#34B0E4"
+            android:textSize="12sp">
+
+
+        </TextView>
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/humidvale"
+            android:textColor="#34B0E4"
+            android:textSize="12sp">
+
+
+        </TextView>
+
+
+
+      </LinearLayout>
+    </LinearLayout>
+
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="110dp"
+      android:layout_marginTop="20dp"
+
+      android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="211dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/totaltasklbl2"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:fontFamily="sans-serif-light"
+          android:text="@string/pro_totaltask"
+          android:textAlignment="center"
+          android:textSize="30sp"
+          android:textColor="#36809F"
+          android:textStyle="italic" />
+
+      <TextView
+          android:id="@+id/totaltasktxt"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:fontFamily="sans-serif-medium"
+          android:text="@string/pro_totaltask_counter"
+          android:textAlignment="center"
+          android:textSize="30sp"
+          android:textColor="#36809F"
+          android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+      <TextView
+          android:id="@+id/activetasklbl"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:fontFamily="sans-serif-light"
+          android:text="@string/pro_activetask"
+          android:textAlignment="center"
+          android:textSize="30sp"
+          android:textStyle="italic"
+          android:textColor="#36809F"
+          android:typeface="sans" />
+
+      <TextView
+          android:id="@+id/activetasktxt"
+          android:layout_width="match_parent"
+          android:layout_height="49dp"
+          android:fontFamily="sans-serif-medium"
+          android:text="@string/pro_activetask_counter"
+          android:textAlignment="center"
+          android:textSize="30sp"
+          android:textColor="#36809F"
+          android:textStyle="bold" />
+    </LinearLayout>
+  </LinearLayout>
   <ProgressBar
       android:id="@+id/loader"
       android:visibility="gone"
@@ -124,6 +280,32 @@
     android:visibility="gone">
 
   </TextView>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/todo_recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="229dp"
+      android:layout_marginTop="12dp"
+      android:clipToPadding="false"
+      tools:listitem="@layout/item_row" />
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNav"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+
+        app:menu="@menu/menu"/>
+  </RelativeLayout>
 
 
 </LinearLayout>

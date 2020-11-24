@@ -11,9 +11,7 @@ interface UserDao {
     @Query( "SELECT* FROM UserInfo ORDER BY id  ASC" )
     fun readAllUserData(): LiveData<List<User>>
 
-    fun getUserName() {
-        data class getUserName(
-            @ColumnInfo(name = "email") val email: String?
-        )
-    }
+    @Query(" SELECT COUNT(email) from UserInfo WHERE email= :email")
+    fun exists(email:String):Int
+
 }

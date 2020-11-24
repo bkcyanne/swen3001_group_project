@@ -16,7 +16,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))
+        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false));
     }
 
     override fun getItemCount(): Int {

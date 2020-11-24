@@ -16,35 +16,9 @@
         android:orientation="horizontal"
         tools:ignore="UselessParent">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout1"
-            android:layout_width="fill_parent"
-            android:layout_height="54dp">
 
-            <ImageView
-                android:id="@+id/backButtonIcon2"
-                android:layout_width="65dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="11dp"
-                android:layout_marginEnd="335dp"
-                android:contentDescription="@string/warning"
-                app:srcCompat="@drawable/backprofilepageicon" />
 
-            <ImageView
-                android:id="@+id/editPencilIcon3"
-                android:layout_width="106dp"
-                android:layout_height="62dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="325dp"
-                android:layout_marginEnd="-20dp"
-                android:layout_marginBottom="9dp"
-                android:contentDescription="@string/EditProfile"
-                app:srcCompat="@drawable/edittheicon" />
-        </RelativeLayout>
+
 
     </LinearLayout>
 
@@ -70,7 +44,7 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="133dp"
+            android:layout_width="106dp"
             android:layout_height="61dp"
             app:srcCompat="@drawable/tasknameicon"
             tools:ignore="ContentDescription" />
@@ -81,6 +55,8 @@
             android:layout_height="62dp"
             android:autofillHints="asd"
             android:background="@drawable/backgroundbox"
+            android:layout_gravity="left"
+            android:gravity="center"
             android:ems="10"
             android:hint="@string/ctTaskName"
             android:inputType="textPersonName" />

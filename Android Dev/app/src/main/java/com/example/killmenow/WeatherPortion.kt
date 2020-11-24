@@ -1,33 +1,83 @@
 package com.example.killmenow
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
+
+import androidx.lifecycle.ViewModelProvider
+
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.taskdatabase.ListAdapter
+import com.example.taskdatabase.TaskViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+
 import org.json.JSONObject
-import org.w3c.dom.Text
+
 import java.lang.Exception
-import java.lang.Math.abs
-import java.lang.Math.toIntExact
+
 import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.math.abs
+
+import androidx.lifecycle.Observer
+import com.example.taskdatabase.Task
+
 
 class WeatherPortion : AppCompatActivity() {
     val CITY: String = "Kingston,jm"
     val API: String = "5f628f66be850d4777a4468cd8eb8ce0"
+    private lateinit var mTaskViewModel: TaskViewModel
+    lateinit var editProfileHP: ImageView
+    lateinit var tasksIcon: BottomNavigationItemView
+    lateinit var settingsIcon: BottomNavigationItemView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather_portion)
 
-        weatherTask().execute()
+        tasksIcon = findViewById<BottomNavigationItemView>(R.id.tasks)
+        tasksIcon.setOnClickListener {
+
+            val intent = Intent(this, newTask::class.java)
+            startActivity(intent)
+
+
+        }
+
+        settingsIcon = findViewById<BottomNavigationItemView>(R.id.settings)
+        settingsIcon.setOnClickListener {
+
+            val intent = Intent(this, settings::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
+        val adapter = ListAdapter()
+        if(adapter.itemCount!=0) {
+            val recyclerView = findViewById<RecyclerView>(R.id.recyclerviewtasks)
+            recyclerView.adapter = adapter
+            recyclerView.layoutManager = LinearLayoutManager(this)
+
+            // UserViewModel
+
+            mTaskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+            mTaskViewModel.readAllData.observe(this, Observer { user ->
+                adapter.setData(user)
+            })
+        }
+            weatherTask().execute()
+
     }
+
 
     inner class weatherTask(): AsyncTask<String, Void, String>(){
 
@@ -64,7 +114,8 @@ class WeatherPortion : AppCompatActivity() {
                 val sys = jsonObj.getJSONObject("sys")
                 val wind = jsonObj.getJSONObject("wind")
 
-                val temp = main.getString("temp") + "°C"
+                val temp = main.getString("temp")+"°C"
+                val pressure = main.getString("pressure")
                 val humidity = main.getString("humidity")
                 val address = jsonObj.getString("name") + ", " + sys.getString("country")
                 val windSpeed = wind.getString("speed")
@@ -75,6 +126,7 @@ class WeatherPortion : AppCompatActivity() {
                 findViewById<TextView>(R.id.update).text= updatedAtText
                 findViewById<TextView>(R.id.climate).text = humidity
                 findViewById<TextView>(R.id.wind).text = windSpeed
+                findViewById<TextView>(R.id.pressure).text = pressure
 
                 findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
 
@@ -86,4 +138,5 @@ class WeatherPortion : AppCompatActivity() {
         }
 
     }
+
 }

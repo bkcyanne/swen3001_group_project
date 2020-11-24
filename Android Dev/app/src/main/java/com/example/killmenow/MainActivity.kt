@@ -13,13 +13,17 @@ import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.from
 import androidx.biometric.BiometricPrompt
 import android.hardware.biometrics.BiometricPrompt.AuthenticationCallback
+import android.os.AsyncTask
 import android.util.Log
 import androidx.biometric.BiometricPrompt.*
 import androidx.core.content.ContextCompat
 
 import androidx.lifecycle.ViewModelProvider
+
+import androidx.room.Dao
 import com.example.database.User
 import com.example.database.UserDao
+import com.example.database.UserDatabase
 import com.example.database.UserViewModel
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.credentials.CredentialPickerConfig.Prompt.SIGN_IN
@@ -51,13 +55,16 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
     lateinit var bioManager:BiometricManager
     lateinit var bioPrompt:BiometricPrompt
     lateinit var promptInfo: BiometricPrompt.PromptInfo
-     lateinit var userDao: UserDao
+
+    lateinit var userdb: User
     lateinit var executor: Executor
+
+    val firstUser:User=User(0,"Corey","Corey@gmail.com","somepassword")
 
      @RequiresApi(Build.VERSION_CODES.Q)
 
      override fun onCreate(savedInstanceState: Bundle?) {
-
+        val userDao =UserDatabase.getDatabase(this).userDao()
          createAccUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
          super.onCreate(savedInstanceState)
          setContentView(R.layout.activity_main)
@@ -73,15 +80,16 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
                  pW = pWInput.text.toString()
 
 
-                 if (uN == "AdminCorey" && pW == "tasteepatty") {
-                    val tempItem=userDao.readAllUserData()
-                   Log.d("Success","$tempItem")
 
-                     Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
+
+                 if (uN=="AdminCorey"&&pW=="tasteepatty") {
+                     Toast.makeText(this, "User has not been created", Toast.LENGTH_SHORT).show()
+
+                    Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
                      sleep(3000)
 
 
-                     val intent = Intent(this, HomePage::class.java)
+                     val intent = Intent(this, WeatherPortion::class.java)
                      startActivity(intent)
                      finish()
 
@@ -99,7 +107,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
          val noAccButton = findViewById<Button>(R.id.noAccButton)
          noAccButton.setOnClickListener {
-             val intent = Intent(this, accCreationPage::class.java)
+             val intent = Intent(this,accCreationPage::class.java)
              startActivity(intent)
              finish()
 
@@ -213,7 +221,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
          }
      }
      fun navToHomePage(){
-         val homePageIntent = Intent(this,HomePage::class.java)
+         val homePageIntent = Intent(this,WeatherPortion::class.java)
          startActivity(homePageIntent)
          finish()
 

@@ -10,12 +10,12 @@
 
     /*create Account*/
 
-    <string name="fullName">Full Name</string>
+    <string name="fullName">Username</string>
     <string name="email">Email</string>
     <string name="cAPassword">Password</string>
     <string name="cAPasswordConf">Re-Type Password</string>
     <string name="createAccount">Create Account</string>
-    <string name="warning">password must be at least 6 words</string>
+    <string name="warning">password must be at least 6 letters</string>
     <string name="createButton">Create</string>
 
     <string name="addPhotoText">Add a photo!</string>
@@ -82,8 +82,15 @@
     <string name="tasktitle">Warrior</string>
     <string name="googleaccount">tesing@gmail.com</string>
     <string name="facebookaccount">John Brown</string>
-    <string name = "RecyclerViewItems">Recycler Data Here</string>
 
+    <string name = "Location">Location</string>
+    <string name ="Humidity">Humidity</string>
+    <string name ="Presssure">Pressure</string>
+    <string name = "humidvale">4.5</string>
+    <string name = "RecyclerViewItems">Recycler Data Here</string>
+    <string name = "updatedAt">updated dAt</string>
+    <string name = "Calendar">Calendar</string>
+    <string name = "Tasks">Tasks</string>
     /*Google Profile*/
 
     <string name ="GoogleFullName">Corey Edwards</string>
