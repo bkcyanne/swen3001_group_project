@@ -2,13 +2,22 @@ package com.example.killmenow
 
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.taskdatabase.Task
+import com.example.taskdatabase.TaskViewModel
+import kotlinx.android.synthetic.main.fragment_add.*
+import kotlinx.android.synthetic.main.fragment_add.TaskName
 import kotlinx.android.synthetic.main.fragment_add.view.*
+import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -17,6 +26,10 @@ import java.util.*
 class UpdateFragment : Fragment() {
 
     private val args by navArgs<UpdateFragmentArgs>()
+    private val startCalendar = Calendar.getInstance()
+    private val endCalendar = Calendar.getInstance()
+    private lateinit var mTaskViewModel: TaskViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +38,10 @@ class UpdateFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_update, container, false)
 
+        mTaskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+
         //GET AND SET START CALENDAR VARIABLES
-        val startCalendar = Calendar.getInstance()
+
 
         val starYear = args.currentTask.startTimeYear
         val startMonth = args.currentTask.startTimeMonth
@@ -38,7 +53,7 @@ class UpdateFragment : Fragment() {
 
 
         //GET AND SET END CALENDAR VARIABLES
-        val endCalendar = Calendar.getInstance()
+
 
         val endYear = args.currentTask.endTimeYear
         val endMonth = args.currentTask.endTimeMonth
@@ -92,7 +107,55 @@ class UpdateFragment : Fragment() {
             }
             TimePickerDialog(requireContext(),timeSetListener,endCalendar.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
         }
+
+        var status = args.currentTask.status
+
+        view.Complete.setOnClickListener{
+            if(view.Complete.isChecked) {
+                status = 1
+            }
+            else {
+                status = 0
+            }
+        }
+
+
         //END TIME PICKER
+
+        view.updateTaskButton.setOnClickListener{
+            updateTask(status)
+        }
+
         return view
+    }
+
+    private fun updateTask(status: Int) {
+        val name = UpdateTaskName.text.toString()
+        val description = UpdateTaskDescription.text.toString()
+
+        val startYear = startCalendar.get(Calendar.YEAR)
+        val startMonth = startCalendar.get(Calendar.MONTH)
+        val startDay = startCalendar.get(Calendar.DAY_OF_MONTH)
+        val startTimeHour = startCalendar.get(Calendar.HOUR)
+        val startTimeMinute = startCalendar.get(Calendar.MINUTE)
+
+        val endYear = endCalendar.get(Calendar.YEAR)
+        val endMonth = endCalendar.get(Calendar.MONTH)
+        val endDay = endCalendar.get(Calendar.DAY_OF_MONTH)
+        val endTimeHour = startCalendar.get(Calendar.HOUR)
+        val endTimeMinute = endCalendar.get(Calendar.MINUTE)
+
+        if(inputCheck(name)==true) {
+            val updateTask = Task(args.currentTask.id,name,description,startYear,startMonth,startDay,startTimeHour,startTimeMinute,endYear,endMonth,endDay,endTimeHour,endTimeMinute,status)
+            mTaskViewModel.updateTask(updateTask)
+            Toast.makeText(requireContext(), "Successfully updated", Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+        } else {
+            Toast.makeText(requireContext(), "Please input a task name", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun inputCheck(name: String): Boolean{
+        return !(TextUtils.isEmpty(name))
     }
 }

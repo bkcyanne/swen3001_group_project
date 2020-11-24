@@ -1,10 +1,7 @@
 package com.example.taskdatabase
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface TaskDao {
@@ -15,5 +12,6 @@ interface TaskDao {
     @Query("SELECT * FROM task_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Task>>
 
-
+    @Update
+    suspend fun updateTask(task: Task)
 }
