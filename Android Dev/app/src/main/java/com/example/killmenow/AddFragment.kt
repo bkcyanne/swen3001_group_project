@@ -90,13 +90,13 @@ class AddFragment : Fragment() {
 
         val startYear = startCalendar.get(Calendar.YEAR)
         val startMonth = startCalendar.get(Calendar.MONTH)
-        val startDay = startCalendar.get(Calendar.DAY_OF_WEEK)
+        val startDay = startCalendar.get(Calendar.DAY_OF_MONTH)
         val startTimeHour = startCalendar.get(Calendar.HOUR)
         val startTimeMinute = startCalendar.get(Calendar.MINUTE)
 
         val endYear = endCalendar.get(Calendar.YEAR)
         val endMonth = endCalendar.get(Calendar.MONTH)
-        val endDay = endCalendar.get(Calendar.DAY_OF_WEEK)
+        val endDay = endCalendar.get(Calendar.DAY_OF_MONTH)
         val endTimeHour = startCalendar.get(Calendar.HOUR)
         val endTimeMinute = endCalendar.get(Calendar.MINUTE)
 
