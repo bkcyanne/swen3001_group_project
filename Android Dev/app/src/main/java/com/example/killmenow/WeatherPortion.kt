@@ -46,7 +46,7 @@ class WeatherPortion : AppCompatActivity() {
         tasksIcon = findViewById<BottomNavigationItemView>(R.id.tasks)
         tasksIcon.setOnClickListener {
 
-            val intent = Intent(this, newTask::class.java)
+            val intent = Intent(this, viewAllTasks::class.java)
             startActivity(intent)
 
 
@@ -63,7 +63,7 @@ class WeatherPortion : AppCompatActivity() {
 
         val adapter = ListAdapter()
         if(adapter.itemCount!=0) {
-            val recyclerView = findViewById<RecyclerView>(R.id.recyclerviewtasks)
+            val recyclerView = findViewById<RecyclerView>(R.id.todo_recycler_view)
             recyclerView.adapter = adapter
             recyclerView.layoutManager = LinearLayoutManager(this)
 

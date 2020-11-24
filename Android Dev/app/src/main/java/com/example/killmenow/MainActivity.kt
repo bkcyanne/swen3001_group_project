@@ -82,11 +82,11 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
 
 
-                 if (uN=="AdminCorey"&&pW=="tasteepatty") {
+                 if (uN==""&&pW=="") {
                      Toast.makeText(this, "User has not been created", Toast.LENGTH_SHORT).show()
 
                     Toast.makeText(this, "Welcome back $uN!", Toast.LENGTH_SHORT).show()
-                     sleep(3000)
+                    // sleep(3000)
 
 
                      val intent = Intent(this, WeatherPortion::class.java)
