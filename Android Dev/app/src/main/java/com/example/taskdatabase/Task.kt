@@ -1,10 +1,13 @@
 package com.example.taskdatabase
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 import java.util.*
 
+@Parcelize
 @Entity(tableName = "task_table")
 data class Task(
     @PrimaryKey(autoGenerate = true)
@@ -15,6 +18,9 @@ data class Task(
 
     @ColumnInfo(name = "description")
     val description: String,
+
+    @ColumnInfo(name = "start_year")
+    val startTimeYear: Int,
 
     @ColumnInfo(name = "start_month")
     val startTimeMonth: Int,
@@ -28,6 +34,9 @@ data class Task(
     @ColumnInfo(name = "start_minute")
     val startTimeMinute: Int,
 
+    @ColumnInfo(name = "end_year")
+    val endTimeYear: Int,
+
     @ColumnInfo(name = "end_month")
     val endTimeMonth: Int,
 
@@ -38,5 +47,8 @@ data class Task(
     val endTimeHour: Int,
 
     @ColumnInfo(name = "end_minute")
-    val endTimeMinute: Int
-)
+    val endTimeMinute: Int,
+
+    @ColumnInfo(name = "status")
+    val status: Int
+): Parcelable

@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:paddingTop="2sp"
-    android:focusable="true">
+    android:focusable="true"
+    android:id="@+id/custom_row">
 
 
     <RadioButton

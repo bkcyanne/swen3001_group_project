@@ -31,8 +31,9 @@ class settings : AppCompatActivity() {
 
         profileIconInput.setOnClickListener{
 
-            val intent = Intent(this,HomePage::class.java)
+            val intent = Intent(this,WeatherPortion::class.java)
             startActivity(intent)
+            finish()
 
         }
 
@@ -41,6 +42,7 @@ class settings : AppCompatActivity() {
 
             val intent = Intent(this, viewAllTasks::class.java)
             startActivity(intent)
+            finish()
 
         }
         settingsIcon.setOnClickListener{

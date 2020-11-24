@@ -22,36 +22,9 @@ import kotlinx.android.synthetic.main.activity_view_all_tasks.view.*
 
 class viewAllTasks : AppCompatActivity() {
 
-    private lateinit var mTaskViewModel: TaskViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_all_tasks)
-
-
-
-
-
-
-
-        // Recyclerview
-        val adapter = ListAdapter()
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerviewtasks)
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
-
-        // UserViewModel
-        mTaskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
-        mTaskViewModel.readAllData.observe(this, Observer {user->
-            adapter.setData(user)
-        })
-
-        val addTask = findViewById<FloatingActionButton>(R.id.floatingActionButton)
-        addTask.setOnClickListener{
-            val intent = Intent(this, newTask::class.java)
-            startActivity(intent)
-
-        }
+        setContentView(R.layout.view_tasks)
     }
 
 }

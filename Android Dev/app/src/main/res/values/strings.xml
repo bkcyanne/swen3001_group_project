@@ -10,12 +10,12 @@
 
     /*create Account*/
 
-    <string name="fullName">Full Name</string>
+    <string name="fullName">Username</string>
     <string name="email">Email</string>
     <string name="cAPassword">Password</string>
     <string name="cAPasswordConf">Re-Type Password</string>
     <string name="createAccount">Create Account</string>
-    <string name="warning">password must be at least 6 words</string>
+    <string name="warning">password must be at least 6 letters</string>
     <string name="createButton">Create</string>
 
     <string name="addPhotoText">Add a photo!</string>
@@ -43,7 +43,7 @@
     <string name="DynamicTask3">Review tomorrows forecast</string>
     <string name="DynamicTask4">Upcoming Tasks to set</string>
     <string name="DynamicTask5">Upcoming Tasks to set</string>
-    <string name = "Date">Date:</string>
+    <string name="Date">Date:</string>
 
     <string name="UncheckedIcon">""</string>
 
@@ -53,7 +53,7 @@
     <string name="EditProfile">Edit Profile</string>
     <string name="Gender">Gender</string>
     <string name="LinkedAccounts">Linked Accounts:</string>
-    <string name = "Save">SAVE</string>
+    <string name="Save">SAVE</string>
 
 
     /*Settings*/
@@ -82,13 +82,22 @@
     <string name="tasktitle">Warrior</string>
     <string name="googleaccount">tesing@gmail.com</string>
     <string name="facebookaccount">John Brown</string>
-    <string name = "RecyclerViewItems">Recycler Data Here</string>
 
+    <string name="Location">Location</string>
+    <string name="Humidity">Humidity</string>
+    <string name="Presssure">Pressure</string>
+    <string name="humidvale">4.5</string>
+    <string name="RecyclerViewItems">Recycler Data Here</string>
+    <string name="updatedAt">updated dAt</string>
+    <string name="Calendar">Calendar</string>
+    <string name="Tasks">Tasks</string>
     /*Google Profile*/
 
-    <string name ="GoogleFullName">Corey Edwards</string>
-    <string name ="GoogleEmail">CoreyJ.Edwards24@gmail.com</string>
-    <string name ="GoogleId">DatBoiCorey</string>
-    <string name = "signout">Sign Out</string>
+    <string name="GoogleFullName">Corey Edwards</string>
+    <string name="GoogleEmail">CoreyJ.Edwards24@gmail.com</string>
+    <string name="GoogleId">DatBoiCorey</string>
+    <string name="signout">Sign Out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
