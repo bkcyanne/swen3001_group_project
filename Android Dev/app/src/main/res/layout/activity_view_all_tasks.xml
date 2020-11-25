@@ -12,10 +12,24 @@
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewtasks"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            android:id="@+id/recyclerviewtasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/notificationButton"
+        android:layout_width="103dp"
+        android:layout_height="597dp"
+        android:layout_above="@+id/floatingActionButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="135dp"
+        android:clickable="true"
+        android:contentDescription="@string/warning"
+        android:focusable="true"
+        android:tint="@android:color/white" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
