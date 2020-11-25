@@ -32,11 +32,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        lateinit var mTaskViewModel: TaskViewModel
+
         val currentItem = taskList[position]
         holder.itemView.textName.text = currentItem.name.toString()
         holder.itemView.textDescription.text = currentItem.description.toString()
-        holder.itemView.textDate.text = currentItem.startTimeHour.toString() + ": "+ formatTime(currentItem.startTimeMinute)
+        holder.itemView.textDate.text = currentItem.endDay.toString()+"/"+currentItem.endTimeMonth.toString()+"/"+currentItem.endTimeYear.toString()+"     "+currentItem.endTimeHour.toString()+":"+currentItem.endTimeMinute.toString()
 
         holder.itemView.custom_row.setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)

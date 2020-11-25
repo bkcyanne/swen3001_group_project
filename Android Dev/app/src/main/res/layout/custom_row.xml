@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_row"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="90sp"
     android:clickable="true"
-    android:paddingTop="2sp"
     android:focusable="true"
-    android:id="@+id/custom_row">
+    android:paddingTop="10sp">
 
+    <CheckBox
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
     <TextView
         android:id="@+id/textName"
@@ -19,58 +28,42 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.031" />
 
-            app:layout_constraintStart_toEndOf="@+id/radioButton"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
+    <TextView
         android:id="@+id/textDescription"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_width="259dp"
+        android:layout_height="20dp"
         android:text="@string/ctTaskDescription"
         android:textColor="#36809F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textName"
         app:layout_constraintVertical_bias="0.0" />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/textDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:textColor="#000080"
-            android:text="@string/Date">
 
-        </TextView>
-    </LinearLayout>
-
-
-        android:text="@string/Date"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
-
-    <CheckBox
-        android:id="@+id/status"
+    <TextView
+        android:id="@+id/Due"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textDate"
-        app:layout_constraintHorizontal_bias="0.026"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:text="Due: "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintTop_toBottomOf="@+id/textDescription" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Due"
+        app:layout_constraintTop_toBottomOf="@+id/textDescription"
+        app:layout_constraintVertical_bias="0.769" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
