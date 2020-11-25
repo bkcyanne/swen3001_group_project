@@ -1,5 +1,6 @@
 package com.example.killmenow
 
+import android.app.AlertDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
 import android.text.TextUtils
@@ -20,6 +21,7 @@ import kotlinx.android.synthetic.main.fragment_add.view.*
 import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
 import java.text.SimpleDateFormat
+import java.time.Month
 import java.util.*
 
 
@@ -126,7 +128,44 @@ class UpdateFragment : Fragment() {
             updateTask(status)
         }
 
+        view.deleteTask.setOnClickListener{
+            val id = args.currentTask.id
+            val name = args.currentTask.name
+            val description = args.currentTask.description
+
+            val startYear = args.currentTask.startTimeYear
+            val startMonth = args.currentTask.startTimeMonth
+            val startDay = args.currentTask.startDay
+            val startTimeHour = args.currentTask.startTimeHour
+            val startTimeMinute = args.currentTask.startTimeMinute
+
+            val endYear = args.currentTask.endTimeYear
+            val endMonth = args.currentTask.endTimeMonth
+            val endDay = args.currentTask.endDay
+            val endTimeHour = args.currentTask.endTimeHour
+            val endTimeMinute = args.currentTask.endTimeMinute
+            val status = args.currentTask.status
+            deleteTask(id, name, description, startYear, startMonth, startDay, startTimeHour, startTimeMinute, endYear, endMonth, endDay, endTimeHour, endTimeMinute, status)
+        }
+
         return view
+    }
+
+    private fun deleteTask(id: Int, name: String, description: String, startYear: Int, startMonth: Int, startDay: Int, startTimeHour: Int, startTimeMinute: Int, endYear: Int, endMonth: Int, endDay: Int, endTimeHour: Int, endTimeMinute: Int, status: Int) {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Yes"){_,_->
+            val deletedTask = Task(id,name,description,startYear,startMonth,startDay,startTimeHour,startTimeMinute,endYear,endMonth,endDay,endTimeHour,endTimeMinute,status)
+            mTaskViewModel.deleteTask(deletedTask)
+            findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+        }
+        builder.setNegativeButton("No") {_,_->
+
+        }
+        builder.setTitle("Delete ${args.currentTask.name}?")
+        builder.setMessage("Are you sure you want to delete ${args.currentTask.name}?")
+        builder.create().show()
+
+
     }
 
     private fun updateTask(status: Int) {

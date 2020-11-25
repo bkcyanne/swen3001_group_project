@@ -224,7 +224,6 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
          val homePageIntent = Intent(this,WeatherPortion::class.java)
          startActivity(homePageIntent)
          finish()
-
      }
 
 

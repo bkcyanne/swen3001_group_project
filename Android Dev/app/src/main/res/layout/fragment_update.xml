@@ -187,6 +187,15 @@
 
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/deleteTask"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:text="Delete"
+                android:textAlignment="center"
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
 
