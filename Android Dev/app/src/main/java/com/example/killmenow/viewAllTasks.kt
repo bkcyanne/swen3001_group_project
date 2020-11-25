@@ -1,6 +1,7 @@
 package com.example.killmenow
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,6 +20,7 @@ import com.example.taskdatabase.TaskViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_view_all_tasks.*
 import kotlinx.android.synthetic.main.activity_view_all_tasks.view.*
+import java.lang.Thread.sleep
 
 class viewAllTasks : AppCompatActivity() {
 
@@ -48,6 +50,10 @@ class viewAllTasks : AppCompatActivity() {
 
         val addTask = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         addTask.setOnClickListener{
+
+            floatingActionButton.setColorFilter(Color.CYAN)
+            sleep(100)
+
             val intent = Intent(this, newTask::class.java)
             startActivity(intent)
 
