@@ -121,9 +121,14 @@
         android:text="@string/FirstDay"
         android:textSize="25sp"
         android:textColor="#36809F"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="10dp"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
         <TextView
             android:id="@+id/Language"
             android:layout_width="match_parent"
@@ -137,11 +142,20 @@
             android:textSize="25sp" />
 
 
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="70dp"/>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/langSpinner"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/checkbox"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
     <TextView
         android:id="@+id/Themes"
         android:layout_width="match_parent"
@@ -154,6 +168,14 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="10dp"/>
 
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/themeSpinner"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/checkbox"/>
+    </LinearLayout>
     <ImageView
         android:id="@+id/helpicon"
         android:layout_width="match_parent"
