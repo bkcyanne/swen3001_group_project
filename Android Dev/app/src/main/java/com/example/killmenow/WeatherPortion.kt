@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.activity.viewModels
 
 import androidx.lifecycle.ViewModelProvider
 
@@ -28,7 +29,11 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 import androidx.lifecycle.Observer
+import androidx.lifecycle.viewModelScope
 import com.example.taskdatabase.Task
+import kotlinx.android.synthetic.main.activity_home_page.*
+import kotlinx.android.synthetic.main.activity_weather_portion.*
+import kotlinx.android.synthetic.main.activity_weather_portion.totaltasktxt
 
 
 class WeatherPortion : AppCompatActivity() {
@@ -42,6 +47,7 @@ class WeatherPortion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather_portion)
+
 
         tasksIcon = findViewById<BottomNavigationItemView>(R.id.tasks)
         tasksIcon.setOnClickListener {

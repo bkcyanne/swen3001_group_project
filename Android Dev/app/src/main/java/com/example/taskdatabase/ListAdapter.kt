@@ -32,6 +32,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        lateinit var mTaskViewModel: TaskViewModel
         val currentItem = taskList[position]
         holder.itemView.textName.text = currentItem.name.toString()
         holder.itemView.textDescription.text = currentItem.description.toString()
@@ -41,6 +42,19 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
         }
+
+        //MARK TASKS AS COMPLETE OR INCOMPLETE WHEN CHECK BOX IS TICKED
+
+        /*
+        holder.itemView.status.setOnClickListener{
+            var status = 0
+
+            if(holder.itemView.status.isChecked) {
+                mTaskViewModel.completeTask(currentItem.id)
+            } else {
+                mTaskViewModel.incompleteTask(currentItem.id)
+            }
+        }*/
     }
 
     fun setData(task: List<Task>) {

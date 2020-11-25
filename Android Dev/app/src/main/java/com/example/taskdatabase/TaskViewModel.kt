@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.database.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class TaskViewModel(application: Application): AndroidViewModel(application) {
 
@@ -34,6 +35,18 @@ class TaskViewModel(application: Application): AndroidViewModel(application) {
     fun deleteTask(task: Task) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteTask(task)
+        }
+    }
+
+    fun incompleteTask(id: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.incompleteTask(id)
+        }
+    }
+
+    fun completeTask(id: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.completeTask(id)
         }
     }
 }
