@@ -16,7 +16,9 @@ class settings : AppCompatActivity() {
     lateinit var profileIconInput :ImageView
     lateinit var tasksIcon:BottomNavigationItemView
     lateinit var settingsIcon:TextView
-    var languages: Array<String> =arrayOf("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+    lateinit var homeIcon:BottomNavigationItemView
+    val firstDay: Array<String> =arrayOf("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+    var languages: Array<String> =arrayOf("English","Español","日本語")
     var themes: Array<String> =arrayOf("Standard","Dark","Purple","Wild")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +27,15 @@ class settings : AppCompatActivity() {
         profileIconInput=findViewById<ImageView>(R.id.ProfileIcon)
         tasksIcon=findViewById<BottomNavigationItemView>(R.id.tasks)
         settingsIcon=findViewById<TextView>(R.id.settings)
+        homeIcon=findViewById<BottomNavigationItemView>(R.id.homePage)
 
         val langAdapter =ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,languages)
         langSpinner.adapter=langAdapter
 
         val themeAdapter =ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,themes)
        themeSpinner.adapter=themeAdapter
-
+        val firstDayAdapter =ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,firstDay)
+        firstDaySpinner.adapter=firstDayAdapter
 
         profileInput.setOnClickListener{
 
@@ -64,6 +68,13 @@ class settings : AppCompatActivity() {
             startActivity(intent)
 
         }
+        homeIcon.setOnClickListener{
+
+            val intent = Intent(this, WeatherPortion::class.java)
+            startActivity(intent)
+
+        }
+
 
 
 

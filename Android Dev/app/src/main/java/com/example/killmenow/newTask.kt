@@ -34,6 +34,7 @@ class newTask : AppCompatActivity() {
     lateinit var timeSet:String
     lateinit var tasksIcon: BottomNavigationItemView
     lateinit var settingsIcon: BottomNavigationItemView
+    lateinit var homeIcon:BottomNavigationItemView
 
     private lateinit var taskViewModel: TaskViewModel
 
@@ -177,6 +178,14 @@ class newTask : AppCompatActivity() {
         settingsIcon.setOnClickListener {
 
             val intent = Intent(this, settings::class.java)
+            startActivity(intent)
+
+
+        }
+        homeIcon = findViewById<BottomNavigationItemView>(R.id.homePage)
+        homeIcon.setOnClickListener {
+
+            val intent = Intent(this, WeatherPortion::class.java)
             startActivity(intent)
 
 

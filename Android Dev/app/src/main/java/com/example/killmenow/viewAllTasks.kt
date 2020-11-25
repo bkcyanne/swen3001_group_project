@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taskdatabase.ListAdapter
 import com.example.taskdatabase.TaskViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_view_all_tasks.*
 import kotlinx.android.synthetic.main.activity_view_all_tasks.view.*
@@ -25,14 +26,39 @@ import java.lang.Thread.sleep
 class viewAllTasks : AppCompatActivity() {
 
     private lateinit var mTaskViewModel: TaskViewModel
+    lateinit var tasksIcon: BottomNavigationItemView
+    lateinit var settingsIcon: BottomNavigationItemView
+    lateinit var homeIcon:BottomNavigationItemView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_all_tasks)
 
+        tasksIcon = findViewById<BottomNavigationItemView>(R.id.tasks)
+        tasksIcon.setOnClickListener {
+
+            val intent = Intent(this, viewAllTasks::class.java)
+            startActivity(intent)
 
 
+        }
 
+        settingsIcon = findViewById<BottomNavigationItemView>(R.id.settings)
+        settingsIcon.setOnClickListener {
+
+            val intent = Intent(this, settings::class.java)
+            startActivity(intent)
+
+
+        }
+        homeIcon=findViewById<BottomNavigationItemView>(R.id.homePage)
+        homeIcon.setOnClickListener {
+
+            val intent = Intent(this, WeatherPortion::class.java)
+            startActivity(intent)
+
+
+        }
 
 
 
@@ -56,6 +82,8 @@ class viewAllTasks : AppCompatActivity() {
 
             val intent = Intent(this, newTask::class.java)
             startActivity(intent)
+
+
 
         }
     }
