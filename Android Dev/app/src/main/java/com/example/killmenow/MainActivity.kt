@@ -6,23 +6,16 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
-import androidx.annotation.NonNull
 
 import androidx.annotation.RequiresApi
 import androidx.biometric.BiometricManager
-import androidx.biometric.BiometricManager.from
 import androidx.biometric.BiometricPrompt
-import android.hardware.biometrics.BiometricPrompt.AuthenticationCallback
-import android.os.AsyncTask
-import android.util.Log
 import androidx.biometric.BiometricPrompt.*
 import androidx.core.content.ContextCompat
 
 import androidx.lifecycle.ViewModelProvider
 
-import androidx.room.Dao
 import com.example.database.User
-import com.example.database.UserDao
 import com.example.database.UserDatabase
 import com.example.database.UserViewModel
 import com.google.android.gms.auth.api.Auth
@@ -36,7 +29,6 @@ import com.google.android.gms.common.ConnectionResult
 
 
 import java.lang.Thread.sleep
-import java.util.Date.from
 import java.util.concurrent.Executor
 
 
@@ -229,4 +221,3 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
 
  }
-

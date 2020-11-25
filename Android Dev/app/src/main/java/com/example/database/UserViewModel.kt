@@ -11,7 +11,6 @@ class UserViewModel(application: Application):AndroidViewModel(application) {
 
     private var readAllData: LiveData<List<User>>
     private var repo:UserRepo
-     var sumn = 1
     val firstUser:User=User(1,"Corey","Corey@gmail.com","somepassword")
 
     init{
@@ -32,9 +31,9 @@ class UserViewModel(application: Application):AndroidViewModel(application) {
 
 
      }
-    fun exists(inputUser:String){
-         repo.exists(inputUser)
-        sumn=repo.thisIntegerSumn
+    fun exists(inputUser: String):Int{
+         return repo.exists(inputUser)
+
 
     }
 

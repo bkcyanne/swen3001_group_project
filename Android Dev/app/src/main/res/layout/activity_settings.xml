@@ -7,23 +7,6 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
    >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:gravity="top"
-        android:orientation="horizontal"
-        tools:ignore="UselessParent">
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout1"
-            android:layout_width="fill_parent"
-            android:layout_height="54dp">
-
-
-
-        </RelativeLayout>
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/settings"
@@ -36,8 +19,8 @@
         android:layout_marginBottom="10dp"
         />
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="84dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         android:layout_marginStart="30dp"
@@ -58,6 +41,7 @@
             android:layout_height="52dp"
             android:layout_gravity="center"
             android:text="@string/Profile"
+            android:textColor="#36809F"
             android:textSize="25sp"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
@@ -87,6 +71,7 @@
             android:layout_gravity="center"
             android:text="@string/Notifications"
             android:textSize="25sp"
+            android:textColor="#36809F"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
 
@@ -115,6 +100,7 @@
             android:layout_gravity="center"
             android:text="@string/InviteFriend"
             android:textSize="25sp"
+            android:textColor="#36809F"
             android:layout_marginTop="5dp"/>
     </LinearLayout>
 
@@ -124,6 +110,7 @@
         android:layout_height="wrap_content"
         android:text="@string/preferences"
         android:textSize="25sp"
+        android:textColor="#000080"
         android:layout_marginStart="20dp"/>
 
     <TextView
@@ -133,20 +120,42 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/FirstDay"
         android:textSize="25sp"
-        android:layout_marginStart="70dp"
+        android:textColor="#36809F"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="10dp"/>
 
-    <TextView
-        android:id="@+id/Language"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/Language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
 
-        android:text="@string/Language"
-        android:textSize="25sp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/Language"
+            android:textColor="#36809F"
+            android:textSize="25sp" />
 
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/langSpinner"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/checkbox"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
     <TextView
         android:id="@+id/Themes"
         android:layout_width="match_parent"
@@ -155,9 +164,18 @@
 
         android:text="@string/Themes"
         android:textSize="25sp"
+        android:textColor="#36809F"
         android:layout_marginStart="70dp"
         android:layout_marginTop="10dp"/>
 
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/themeSpinner"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/checkbox"/>
+    </LinearLayout>
     <ImageView
         android:id="@+id/helpicon"
         android:layout_width="match_parent"
