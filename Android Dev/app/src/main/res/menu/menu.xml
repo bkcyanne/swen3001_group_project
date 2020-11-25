@@ -5,7 +5,7 @@
         android:title="@string/Tasks"
         android:icon="@drawable/ic_baseline_filter_none_24"/>
     <item
-        android:id="@+id/calendar"
+        android:id="@+id/homePage"
         android:title="@string/Calendar"
         android:icon="@drawable/ic_baseline_calendar_today_24"/>
     <item

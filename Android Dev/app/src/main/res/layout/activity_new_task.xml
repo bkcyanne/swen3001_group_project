@@ -81,6 +81,7 @@
             android:autofillHints="asd"
             android:background="@drawable/backgroundbox"
             android:ems="10"
+
             android:hint="@string/ctTaskName"
             android:inputType="textPersonName" />
 
@@ -122,16 +123,18 @@
             android:background="@drawable/backgroundbox"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
-            android:hint="@string/HourTime"
+            android:text="@string/HourTime"
+            android:textColor="#36809F"
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/End"
+            android:id="@+id/to"
             android:layout_width="78dp"
             android:layout_height="33dp"
             android:text="@string/End"
             android:textAlignment="center"
             android:textSize="25sp"
+            android:textColor="#36809F"
             android:textStyle="bold" />
 
         <TextView
@@ -141,7 +144,8 @@
             android:background="@drawable/backgroundbox"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
-            android:hint="@string/HourTime"
+            android:text="@string/HourTime"
+            android:textColor="#36809F"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -165,7 +169,7 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/shareTaskButton"
+            android:id="@+id/cancelTaskButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/shape"
