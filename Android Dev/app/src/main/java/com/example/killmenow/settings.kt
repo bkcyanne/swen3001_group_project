@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.killmenow.settings
@@ -17,9 +18,10 @@ class settings : AppCompatActivity() {
     lateinit var tasksIcon:BottomNavigationItemView
     lateinit var settingsIcon:TextView
     lateinit var homeIcon:BottomNavigationItemView
-    val firstDay: Array<String> =arrayOf("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+    val firstDay: Array<String> =arrayOf("Thursday","Tuesday","Wednesday","Monday","Friday","Saturday","Sunday")
     var languages: Array<String> =arrayOf("English","Español","日本語")
     var themes: Array<String> =arrayOf("Standard","Dark","Purple","Wild")
+    lateinit var logout:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -48,12 +50,17 @@ class settings : AppCompatActivity() {
 
         profileIconInput.setOnClickListener{
 
-            val intent = Intent(this,WeatherPortion::class.java)
+            val intent = Intent(this,editProfile::class.java)
             startActivity(intent)
             finish()
 
         }
+        logout=findViewById(R.id.LogoutButton)
+        logout.setOnClickListener{
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
 
+        }
 
         tasksIcon.setOnClickListener{
 

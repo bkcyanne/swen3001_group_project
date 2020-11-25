@@ -1,14 +1,22 @@
 package com.example.killmenow
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.TimePickerDialog
+import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.graphics.Typeface
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.widget.*
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.text.toSpannable
 import androidx.lifecycle.ViewModelProvider
 import com.example.taskdatabase.Task
@@ -35,7 +43,9 @@ class newTask : AppCompatActivity() {
     lateinit var tasksIcon: BottomNavigationItemView
     lateinit var settingsIcon: BottomNavigationItemView
     lateinit var homeIcon:BottomNavigationItemView
-
+    val channelId = "Channel Example"
+    val notificationId = 101
+    lateinit var cancelButton:Button
     private lateinit var taskViewModel: TaskViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,6 +61,13 @@ class newTask : AppCompatActivity() {
 
         ctTaskName=ctTaskNameInput.text.toString()
 
+        cancelButton=findViewById(R.id.cancelTaskButton)
+
+        cancelButton.setOnClickListener{
+            val intent=Intent(this,viewAllTasks::class.java)
+            startActivity(intent)
+
+        }
 
         val startCalendar = Calendar.getInstance()
         val endCalendar = Calendar.getInstance()
@@ -158,6 +175,10 @@ class newTask : AppCompatActivity() {
                 taskViewModel.addTask(task)
 
                 Toast.makeText(this, ctTaskName+"Added Successfully",Toast.LENGTH_SHORT).show()
+                createNotificationChannel()
+
+
+                sendNotif()
                 val intent= Intent(this,viewAllTasks::class.java)
                 startActivity(intent)
             } else {
@@ -192,6 +213,50 @@ class newTask : AppCompatActivity() {
         }
 
     }
+    fun createNotificationChannel(){
+        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.O){
+
+            val name ="Notification Title"
+            val descriptionText = "Notification Description"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel : NotificationChannel = NotificationChannel(channelId,name,importance).apply{
+
+                description=descriptionText
+            }
+            val notifManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notifManager.createNotificationChannel(channel)
+        }
+
+
+    }
+    fun sendNotif(){
+        val intent = Intent(this,viewAllTasks::class.java).apply{
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+
+        }
+
+        val pendingIntent: PendingIntent = PendingIntent.getActivity(this,0,intent,0)
+
+        val bitIcon = BitmapFactory.decodeResource(applicationContext.resources,R.drawable.smallicon)
+
+
+        val builder = NotificationCompat.Builder(this,channelId)
+
+
+
+            .setSmallIcon(R.drawable.smallicon)
+            .setContentTitle("First Task")
+            .setContentText("This is a task")
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(pendingIntent)
+        with(NotificationManagerCompat.from(this)){
+
+            notify(notificationId,builder.build())
+        }
+
+    }
+
 }
 
 /*

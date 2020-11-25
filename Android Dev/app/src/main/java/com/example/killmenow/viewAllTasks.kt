@@ -96,14 +96,13 @@ class viewAllTasks : AppCompatActivity() {
 
 
         }
-        createNotificationChannel()
-        notifButton=findViewById(R.id.notificationButton)
-        notifButton.setOnClickListener{
-            sendNotif()
-        }
+       // createNotificationChannel()
+
+
+           // sendNotif()
 
     }
-    fun createNotificationChannel(){
+   /* fun createNotificationChannel(){
         if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.O){
 
             val name ="Notification Title"
@@ -128,14 +127,14 @@ class viewAllTasks : AppCompatActivity() {
 
         val pendingIntent: PendingIntent = PendingIntent.getActivity(this,0,intent,0)
 
-        val bitIcon =BitmapFactory.decodeResource(applicationContext.resources,R.drawable.wind)
+        val bitIcon =BitmapFactory.decodeResource(applicationContext.resources,R.drawable.smallicon)
 
 
         val builder = NotificationCompat.Builder(this,channelId)
 
 
 
-            .setSmallIcon(R.drawable.wind)
+            .setSmallIcon(R.drawable.smallicon)
             .setContentTitle("First Task")
             .setContentText("This is a task")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -143,7 +142,7 @@ class viewAllTasks : AppCompatActivity() {
         with(NotificationManagerCompat.from(this)){
 
             notify(notificationId,builder.build())
-        }
+        }*/
 
-    }
+
 }

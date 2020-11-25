@@ -71,7 +71,7 @@
 
             android:autofillHints="asd"
             android:ems="10"
-            android:hint="@string/fullName"
+            android:hint="@string/RandomUser50"
             android:inputType="textPersonName" />
     </LinearLayout>
 
@@ -94,7 +94,7 @@
 
             android:autofillHints="asd"
             android:ems="10"
-            android:hint="@string/email"
+            android:hint="@string/Coreygmail"
             android:inputType="textEmailAddress" />
     </LinearLayout>
 

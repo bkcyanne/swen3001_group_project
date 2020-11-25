@@ -46,7 +46,7 @@ class WeatherPortion : AppCompatActivity() {
         tasksIcon = findViewById<BottomNavigationItemView>(R.id.tasks)
         tasksIcon.setOnClickListener {
 
-            val intent = Intent(this, newTask::class.java)
+            val intent = Intent(this, viewAllTasks::class.java)
             startActivity(intent)
 
 
