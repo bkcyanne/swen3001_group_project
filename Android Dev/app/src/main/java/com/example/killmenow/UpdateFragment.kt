@@ -72,14 +72,14 @@ class UpdateFragment : Fragment() {
                 view,year,month,day ->
             val month=month+1
             val message ="$day/$month/$year Selected"
-            Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
+          //  Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
         }
 
         view.UpdatedatePickerEnd.init(endCalendar.get(Calendar.YEAR),endCalendar.get(Calendar.MONTH),endCalendar.get(Calendar.DAY_OF_MONTH)){
                 view,year,month,day ->
             val month=month+1
             val message ="$day/$month/$year Selected"
-            Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
+           // Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
         }
 
         //TIME PICKER

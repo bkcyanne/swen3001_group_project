@@ -1,5 +1,6 @@
 package com.example.killmenow
 
+import android.app.AlertDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
 import android.text.TextUtils
@@ -14,6 +15,7 @@ import com.example.taskdatabase.Task
 import com.example.taskdatabase.TaskViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
+import kotlinx.android.synthetic.main.fragment_update.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -38,14 +40,14 @@ class AddFragment : Fragment() {
                 view,year,month,day ->
             val month=month+1
             val message ="$day/$month/$year Selected"
-            Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
+           // Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
         }
 
         view.datePickerEnd.init(endCalendar.get(Calendar.YEAR),endCalendar.get(Calendar.MONTH),endCalendar.get(Calendar.DAY_OF_MONTH)){
                 view,year,month,day ->
             val month=month+1
             val message ="$day/$month/$year Selected"
-            Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
+           // Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
         }
         //END DATE PICKER
 
@@ -79,6 +81,19 @@ class AddFragment : Fragment() {
         //END TIME PICKER
         view.addTaskButton.setOnClickListener{
             insertTaskToDatabase()
+        }
+
+        view.cancel_button.setOnClickListener{
+            val builder = AlertDialog.Builder(requireContext())
+            builder.setPositiveButton("Yes"){_,_->
+                findNavController().navigate(R.id.action_addFragment_to_listFragment)
+            }
+            builder.setNegativeButton("No") {_,_->
+
+            }
+            builder.setTitle("Cancel")
+            builder.setMessage("Are you sure you want to cancel?")
+            builder.create().show()
         }
 
         return view

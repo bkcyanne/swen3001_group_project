@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/pro_totaltask_counter"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -139,7 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="@string/pro_activetask_counter"
+                android:text="0"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />

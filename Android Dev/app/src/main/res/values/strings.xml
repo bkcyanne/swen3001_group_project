@@ -83,14 +83,15 @@
     <string name="googleaccount">tesing@gmail.com</string>
     <string name="facebookaccount">John Brown</string>
 
-    <string name = "Location">Location</string>
-    <string name ="Humidity">Humidity</string>
-    <string name ="Presssure">Pressure</string>
-    <string name = "humidvale">4.5</string>
-    <string name = "RecyclerViewItems">Recycler Data Here</string>
-    <string name = "updatedAt">updated dAt</string>
-    <string name = "Calendar">Home</string>
-    <string name = "Tasks">Tasks</string>
+    <string name="Location">Location</string>
+    <string name="Humidity">Humidity</string>
+    <string name="Presssure">Pressure</string>
+    <string name="humidvale">4.5</string>
+    <string name="RecyclerViewItems">Recycler Data Here</string>
+    <string name="updatedAt">updated dAt</string>
+    <string name="Calendar">Calendar</string>
+    <string name="Tasks">Tasks</string>
+
     /*Google Profile*/
 
     <string name="GoogleFullName">Corey Edwards</string>
