@@ -33,9 +33,10 @@ import java.lang.Thread.sleep
 
 class viewAllTasks : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Launch List Fragment
         setContentView(R.layout.view_tasks)
     }
+
 }

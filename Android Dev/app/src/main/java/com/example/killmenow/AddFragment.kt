@@ -36,39 +36,34 @@ class AddFragment : Fragment() {
         mTaskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
 
         //DATE PICKER
+        /*
         view.datePickerBegin.init(startCalendar.get(Calendar.YEAR),startCalendar.get(Calendar.MONTH),startCalendar.get(Calendar.DAY_OF_MONTH)){
                 view,year,month,day ->
             val month=month+1
             val message ="$day/$month/$year Selected"
-           // Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
         }
+         */
 
         view.datePickerEnd.init(endCalendar.get(Calendar.YEAR),endCalendar.get(Calendar.MONTH),endCalendar.get(Calendar.DAY_OF_MONTH)){
                 view,year,month,day ->
             val month=month+1
             val message ="$day/$month/$year Selected"
-           // Toast.makeText(requireContext(),message, Toast.LENGTH_SHORT).show()
         }
         //END DATE PICKER
 
         //TIME PICKER
         view.StartHourTime.setOnClickListener {
-
-            //val cal = Calendar.getInstance()
             val timeSetListener = TimePickerDialog.OnTimeSetListener{
                     timePicker,hour,minute ->
                 startCalendar.set(Calendar.HOUR_OF_DAY,hour)
                 startCalendar.set(Calendar.MINUTE,minute)
                 view.StartHourTime.text = SimpleDateFormat("HH:mm").format(startCalendar.time)
-
             }
             TimePickerDialog(requireContext(),timeSetListener,startCalendar.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
         }
 
 
         view.EndHourTime.setOnClickListener {
-
-            //val cal = Calendar.getInstance()
             val timeSetListener = TimePickerDialog.OnTimeSetListener{
                     timePicker,hour,minute ->
                 endCalendar.set(Calendar.HOUR_OF_DAY,hour)
@@ -79,18 +74,19 @@ class AddFragment : Fragment() {
             TimePickerDialog(requireContext(),timeSetListener,endCalendar.get(Calendar.HOUR_OF_DAY),(Calendar.MINUTE),false).show()
         }
         //END TIME PICKER
+
+
         view.addTaskButton.setOnClickListener{
             insertTaskToDatabase()
         }
 
         view.cancel_button.setOnClickListener{
+            //Alert dialogue for canceling task creation
             val builder = AlertDialog.Builder(requireContext())
             builder.setPositiveButton("Yes"){_,_->
                 findNavController().navigate(R.id.action_addFragment_to_listFragment)
             }
-            builder.setNegativeButton("No") {_,_->
-
-            }
+            builder.setNegativeButton("No") {_,_-> }
             builder.setTitle("Cancel")
             builder.setMessage("Are you sure you want to cancel?")
             builder.create().show()

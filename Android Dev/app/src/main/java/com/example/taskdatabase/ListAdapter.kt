@@ -44,7 +44,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         }
 
         //MARK TASKS AS COMPLETE OR INCOMPLETE WHEN CHECK BOX IS TICKED
-
+        //DID NOT WORK
         /*
         holder.itemView.status.setOnClickListener{
             var status = 0

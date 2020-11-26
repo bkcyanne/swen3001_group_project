@@ -39,12 +39,18 @@ class TaskViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    /*
+    Returns the count for incomplete tasks
+     */
     fun incompleteTask(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.incompleteTask(id)
         }
     }
 
+    /*
+    Returns the count for completed tasks
+     */
     fun completeTask(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.completeTask(id)

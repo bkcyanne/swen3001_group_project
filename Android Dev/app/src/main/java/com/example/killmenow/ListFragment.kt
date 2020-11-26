@@ -14,7 +14,6 @@ import com.example.taskdatabase.ListAdapter
 import com.example.taskdatabase.TaskViewModel
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
-
 class ListFragment : Fragment() {
 
     private lateinit var mTaskViewModel: TaskViewModel
@@ -36,13 +35,12 @@ class ListFragment : Fragment() {
         mTaskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
         mTaskViewModel.readAllData.observe(viewLifecycleOwner, Observer {task ->
             adapter.setData(task)
-
         })
 
+        //on click navigates to add fragment
         view.floatingActionButton2.setOnClickListener{
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
-
 
         return view
     }
