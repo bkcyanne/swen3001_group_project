@@ -83,7 +83,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
                      val intent = Intent(this, WeatherPortion::class.java)
                      startActivity(intent)
-                     finish()
+
 
                  } else {
                      Toast.makeText(
@@ -101,7 +101,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
          noAccButton.setOnClickListener {
              val intent = Intent(this,accCreationPage::class.java)
              startActivity(intent)
-             finish()
+
 
          }
 
@@ -166,8 +166,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
 
                  override fun onAuthenticationSucceeded(result: AuthenticationResult) {
                      super.onAuthenticationSucceeded(result)
-                     Toast.makeText(this@MainActivity, "WE DID IT BOYZZZ", Toast.LENGTH_SHORT)
-                         .show()
+
                      navToHomePage()
                  }
 
@@ -207,7 +206,7 @@ class MainActivity() : AppCompatActivity(),GoogleApiClient.OnConnectionFailedLis
                     Toast.makeText(this,"Successfull up to this lane",Toast.LENGTH_SHORT).show()
                     sleep(3000)
 
-                   val jumpStartGoogleIntent = Intent(this,accCreationPage::class.java)
+                   val jumpStartGoogleIntent = Intent(this,WeatherPortion::class.java)
                     startActivity(jumpStartGoogleIntent)
                 }
          }

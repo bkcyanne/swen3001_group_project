@@ -71,7 +71,7 @@
 
             android:autofillHints="asd"
             android:ems="10"
-            android:hint="@string/fullName"
+            android:hint="@string/Username"
             android:inputType="textPersonName" />
     </LinearLayout>
 

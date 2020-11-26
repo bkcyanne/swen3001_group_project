@@ -75,8 +75,8 @@
     <string name="pro_email">testing@gmail.com</string>
     <string name="pro_totaltask">Total Task</string>
     <string name="pro_activetask">Active Tasks</string>
-    <string name="pro_totaltask_counter">20</string>
-    <string name="pro_activetask_counter">5</string>
+    <string name="pro_totaltask_counter">0</string>
+    <string name="pro_activetask_counter">0</string>
     <string name="lastupdated">Last Updated</string>
     <string name="dateupdated">Oct 25,2020</string>
     <string name="tasktitle">Warrior</string>
